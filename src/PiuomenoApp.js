@@ -2,19 +2,28 @@ import React, { Component } from 'react';
 
 import App from 'grommet/components/App'
 import Header from 'grommet/components/Header';
-import Tabs from 'grommet/components/Tabs';
-import Tab from 'grommet/components/Tab';
-import Paragraph from 'grommet/components/Paragraph';
 import Title from 'grommet/components/Title';
 import Section from 'grommet/components/Section';
 import NumberInput from 'grommet/components/NumberInput';
+import Paragraph from 'grommet/components/Paragraph';
 import Footer from 'grommet/components/Footer';
 import Box from 'grommet/components/Box';
 
 class PiuomenoApp extends Component {
 
-  handleChange(event) {
+  constructor(props) {
+    super(props);
+    this.state = {
+      num: props.num,
+      elefanti: 0
+    };
+  }
+
+  handleChange = (event) => {
     console.log(event.target.value);
+    this.setState({
+      elefanti: event.target.value / 4500
+    })
   }
 
   render() {
@@ -25,26 +34,17 @@ class PiuomenoApp extends Component {
             Più o meno
           </Title>
         </Header>
-        <Tabs>
-          <Tab title='Peso'>
-            <Paragraph>
-              First contents
-    </Paragraph>
-            <input type='text'
-              value=''
-              onChange={this.handleChange} />
-          </Tab>
-          <Tab title='Distanza'>
-            <Paragraph>
-              Second contents
-    </Paragraph>
-            <input type='text'
-              value=''
-              onChange={this.handleChange} />
-          </Tab>
-        </Tabs>
+        <Section>
+          <NumberInput
+            onChange={this.handleChange} />
+        </Section>
+        <Section>
+          <Paragraph size='xlarge'>
+            🐘 {this.state.elefanti}
+          </Paragraph>
+        </Section>
         <Footer justify='between'
-          size='large'>
+          size='medium'>
           <Box direction='row'
             align='center'
             pad={{ "between": "medium" }}>
