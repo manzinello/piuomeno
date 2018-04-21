@@ -17,7 +17,7 @@ class PiuomenoApp extends Component {
             justify='end'
             direction='row'
             responsive={true}>
-            <p>ciao</p>
+            <p>Testo</p>
           </Box>
         </Header>
       </App>
