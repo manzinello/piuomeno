@@ -24,7 +24,7 @@ class PiuomenoApp extends Component {
           </Title>
         </Header>
         <Tabs>
-          <Tab title='First Title'>
+          <Tab title='Peso'>
             <Paragraph>
               First contents
     </Paragraph>
@@ -32,7 +32,7 @@ class PiuomenoApp extends Component {
               value=''
               onChange={this.handleChange} />
           </Tab>
-          <Tab title='Second Title'>
+          <Tab title='Distanza'>
             <Paragraph>
               Second contents
     </Paragraph>
