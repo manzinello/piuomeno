@@ -2,7 +2,7 @@
   "name": "piuomeno",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://manzinello.github.io/piuomeno",
+  "homepage": "https://manzinello.github.io/piuomeno",
   "dependencies": {
     "grommet": "^1.10.1",
     "react": "^16.3.2",
