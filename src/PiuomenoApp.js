@@ -8,6 +8,8 @@ import Paragraph from 'grommet/components/Paragraph';
 import Title from 'grommet/components/Title';
 import Section from 'grommet/components/Section';
 import NumberInput from 'grommet/components/NumberInput';
+import Footer from 'grommet/components/Footer';
+import Box from 'grommet/components/Box';
 
 class PiuomenoApp extends Component {
 
@@ -41,6 +43,16 @@ class PiuomenoApp extends Component {
               onChange={this.handleChange} />
           </Tab>
         </Tabs>
+        <Footer justify='between'
+          size='large'>
+          <Box direction='row'
+            align='center'
+            pad={{ "between": "medium" }}>
+            <Paragraph margin='none'>
+              sviluppato con amore (e React) da Matteo Manzinello
+    </Paragraph>
+          </Box>
+        </Footer>
       </App>
     );
   }
