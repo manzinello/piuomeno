@@ -17,14 +17,20 @@ class PiuomenoApp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      num: props.num,
-      elefanti: 0
+      num: 0,
+      elefantiafricani: 0,
+      elefantiasiatici: 0,
+      elefantiforeste: 0,
+      balenottereazzurre: 0,
     };
   }
 
   handleChange = (event) => {
     this.setState({
-      elefanti: event.target.value / 4500
+      elefantiafricani: event.target.value / 6000,
+      elefantiasiatici: event.target.value / 5400,
+      elefantiforeste: event.target.value / 2700,
+      balenottereazzurre: event.target.value / 140000,
     })
   }
 
@@ -44,8 +50,14 @@ class PiuomenoApp extends Component {
             onChange={this.handleChange} />
         </Section>
         <Section>
-          <Paragraph size='xlarge'>
-            <Emoji e="🐘" /> {this.state.elefanti}
+          <Paragraph size='large'>
+            <Emoji e="🐘" /><Emoji e="🇨🇬" /> ~<strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti africani
+            <br />
+            <Emoji e="🐘" /><Emoji e="🇨🇳" /> ~<strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti asiatici
+            <br />
+            <Emoji e="🐘" /><Emoji e="🌳" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
+            <br />
+            <Emoji e="🐳" /> ~<strong>{this.state.balenottereazzurre.toFixed(2)}</strong> balenottere azzurre
           </Paragraph>
         </Section>
         <Footer justify='between'
@@ -54,7 +66,7 @@ class PiuomenoApp extends Component {
             align='center'
             pad={{ "between": "medium" }}>
             <Paragraph margin='none'>
-              creato con amore (e React) da <strong>Matteo Manzinello</strong>
+              creato con <Emoji e="❤️" /> da <strong>Matteo Manzinello</strong>
             </Paragraph>
           </Box>
         </Footer>
