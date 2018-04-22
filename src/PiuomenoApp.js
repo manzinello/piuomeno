@@ -15,6 +15,11 @@ import Label from 'grommet/components/Label';
 
 import Emoji from './components/Emoji'
 
+const PESO_ELEFANTE_AFRICANO = 6000;
+const PESO_ELEFANTE_ASIATICO = 5400;
+const PESO_ELEFANTE_FORESTE = 2700;
+const PESO_ELEFANTE_BALENOTTERA = 140000;
+
 class PiuomenoApp extends Component {
 
   constructor(props) {
@@ -30,10 +35,10 @@ class PiuomenoApp extends Component {
 
   handleChange = (event) => {
     this.setState({
-      elefantiafricani: event.target.value / 6000,
-      elefantiasiatici: event.target.value / 5400,
-      elefantiforeste: event.target.value / 2700,
-      balenottereazzurre: event.target.value / 140000,
+      elefantiafricani: event.target.value / PESO_ELEFANTE_AFRICANO,
+      elefantiasiatici: event.target.value / PESO_ELEFANTE_ASIATICO,
+      elefantiforeste: event.target.value / PESO_ELEFANTE_FORESTE,
+      balenottereazzurre: event.target.value / PESO_ELEFANTE_BALENOTTERA,
     })
   }
 
