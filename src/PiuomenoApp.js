@@ -8,6 +8,9 @@ import NumberInput from 'grommet/components/NumberInput';
 import Paragraph from 'grommet/components/Paragraph';
 import Footer from 'grommet/components/Footer';
 import Box from 'grommet/components/Box';
+import Label from 'grommet/components/Label';
+
+import Emoji from './components/Emoji'
 
 class PiuomenoApp extends Component {
 
@@ -34,12 +37,15 @@ class PiuomenoApp extends Component {
           </Title>
         </Header>
         <Section>
+          <Label>
+            Chilogrammi
+            </Label>
           <NumberInput
             onChange={this.handleChange} />
         </Section>
         <Section>
           <Paragraph size='xlarge'>
-            🐘 {this.state.elefanti}
+            <Emoji e="🐘" /> {this.state.elefanti}
           </Paragraph>
         </Section>
         <Footer justify='between'
@@ -48,8 +54,8 @@ class PiuomenoApp extends Component {
             align='center'
             pad={{ "between": "medium" }}>
             <Paragraph margin='none'>
-              sviluppato con amore (e React) da Matteo Manzinello
-    </Paragraph>
+              creato con amore (e React) da <strong>Matteo Manzinello</strong>
+            </Paragraph>
           </Box>
         </Footer>
       </App>
