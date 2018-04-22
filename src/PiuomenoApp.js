@@ -20,7 +20,6 @@ class PiuomenoApp extends Component {
   }
 
   handleChange = (event) => {
-    console.log(event.target.value);
     this.setState({
       elefanti: event.target.value / 4500
     })
