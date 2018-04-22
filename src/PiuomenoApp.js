@@ -66,7 +66,7 @@ class PiuomenoApp extends Component {
             align='center'
             pad={{ "between": "medium" }}>
             <Paragraph margin='none'>
-              creato con <Emoji e="❤️" /> da <strong>Matteo Manzinello</strong>
+              creato con <Emoji e="❤️" /> da <a href="https://matteomanzinello.com"><strong>Matteo Manzinello</strong></a>
             </Paragraph>
           </Box>
         </Footer>
