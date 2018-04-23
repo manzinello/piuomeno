@@ -1,2 +1,2 @@
-# 🐘 Più o meno
+# ➕ Più o meno
 React + Grommet
