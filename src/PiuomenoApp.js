@@ -20,6 +20,8 @@ const PESO_ELEFANTE_ASIATICO = 5400;
 const PESO_ELEFANTE_FORESTE = 2700;
 const PESO_ELEFANTE_BALENOTTERA = 140000;
 
+const CAMPO_DA_CALCIO = 7140;
+
 class PiuomenoApp extends Component {
 
   constructor(props) {
@@ -30,15 +32,22 @@ class PiuomenoApp extends Component {
       elefantiasiatici: 0,
       elefantiforeste: 0,
       balenottereazzurre: 0,
+      campidacalcio: 0,
     };
   }
 
-  handleChange = (event) => {
+  handleChangePeso = (event) => {
     this.setState({
       elefantiafricani: event.target.value / PESO_ELEFANTE_AFRICANO,
       elefantiasiatici: event.target.value / PESO_ELEFANTE_ASIATICO,
       elefantiforeste: event.target.value / PESO_ELEFANTE_FORESTE,
       balenottereazzurre: event.target.value / PESO_ELEFANTE_BALENOTTERA,
+    })
+  }
+
+  handleChangeSuperficie = (event) => {
+    this.setState({
+      campidacalcio: event.target.value / CAMPO_DA_CALCIO,
     })
   }
 
@@ -58,7 +67,7 @@ class PiuomenoApp extends Component {
                 Chilogrammi
             </Label>
               <NumberInput
-                onChange={this.handleChange} />
+                onChange={this.handleChangePeso} />
             </Section>
             <Section>
               <Paragraph size='large'>
@@ -78,9 +87,18 @@ class PiuomenoApp extends Component {
             </Paragraph>
           </Tab>
           <Tab title='Superficie'>
-            <Paragraph>
-              Work in progress!
-            </Paragraph>
+            <Section>
+              <Label>
+                Metri quadrati
+            </Label>
+              <NumberInput
+                onChange={this.handleChangeSuperficie} />
+            </Section>
+            <Section>
+              <Paragraph size='large'>
+                <Emoji e="️⚽" /> ~<strong>{this.state.campidacalcio.toFixed(2)}</strong> campi da calcio
+          </Paragraph>
+            </Section>
           </Tab>
         </Tabs>
         <Footer justify='between'
