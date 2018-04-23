@@ -7,13 +7,15 @@ class Emoji extends Component {
         this.state = {
             e: props.e
         };
+
     }
 
     render() {
+
+        var image = "emoji/" + this.state.e + ".png";
+
         return (
-            <span>
-                {this.state.e}
-            </span>
+            <img src={image} width="24" height="24" />
         );
     }
 

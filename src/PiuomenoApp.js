@@ -80,13 +80,13 @@ class PiuomenoApp extends Component {
             </Section>
             <Section>
               <Paragraph size='large'>
-                <Emoji e="🐘" /> <Emoji e="🇨🇬" /> ~<strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti africani
+                <Emoji e="elephant" /> <Emoji e="africa" /> ~<strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti africani
             <br />
-                <Emoji e="🐘" /> <Emoji e="🇨🇳" /> ~<strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti asiatici
+                <Emoji e="elephant" /> <Emoji e="india" /> ~<strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti asiatici
             <br />
-                <Emoji e="🐘" /> <Emoji e="🌳" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
+                <Emoji e="elephant" /> <Emoji e="tree" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
             <br />
-                <Emoji e="🐳" /> ~<strong>{this.state.balenottereazzurre.toFixed(2)}</strong> balenottere azzurre
+                <Emoji e="whale" /> ~<strong>{this.state.balenottereazzurre.toFixed(2)}</strong> balenottere azzurre
           </Paragraph>
             </Section>
           </Tab>
@@ -100,7 +100,7 @@ class PiuomenoApp extends Component {
             </Section>
             <Section>
               <Paragraph size='large'>
-                <Emoji e="🌎" /> <Emoji e="🌔" /> ~<strong>{this.state.terraluna.toFixed(2)}</strong> distanza Terra-Luna
+                <Emoji e="earth" /> <Emoji e="moon" /> ~<strong>{this.state.terraluna.toFixed(2)}</strong> distanza Terra-Luna
           </Paragraph>
             </Section>
           </Tab>
@@ -114,7 +114,7 @@ class PiuomenoApp extends Component {
             </Section>
             <Section>
               <Paragraph size='large'>
-                <Emoji e="️⚽" /> ~<strong>{this.state.campidacalcio.toFixed(2)}</strong> campi da calcio
+                <Emoji e="soccer" /> ~<strong>{this.state.campidacalcio.toFixed(2)}</strong> campi da calcio
           </Paragraph>
             </Section>
           </Tab>
@@ -125,7 +125,7 @@ class PiuomenoApp extends Component {
             align='center'
             pad={{ "between": "medium" }}>
             <Paragraph margin='none'>
-              creato con <Emoji e="❤️" /> da <a href="https://matteomanzinello.com"><strong>Matteo Manzinello</strong></a>
+              creato con <Emoji e="love" /> da <a href="https://matteomanzinello.com"><strong>Matteo Manzinello</strong></a>
             </Paragraph>
           </Box>
         </Footer>
