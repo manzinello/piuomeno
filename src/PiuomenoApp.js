@@ -12,6 +12,7 @@ import Paragraph from 'grommet/components/Paragraph';
 import Footer from 'grommet/components/Footer';
 import Box from 'grommet/components/Box';
 import Label from 'grommet/components/Label';
+import Select from 'grommet/components/Select';
 
 import Emoji from './components/Emoji'
 
@@ -19,6 +20,8 @@ const PESO_ELEFANTE_AFRICANO = 6000;
 const PESO_ELEFANTE_ASIATICO = 5400;
 const PESO_ELEFANTE_FORESTE = 2700;
 const PESO_ELEFANTE_BALENOTTERA = 140000;
+const PESO_TREX = 6100;
+const PESO_GORILLA = 160;
 
 const CAMPO_DA_CALCIO = 7140;
 const ITALIA = 301338000000;
@@ -35,9 +38,11 @@ class PiuomenoApp extends Component {
       elefantiasiatici: 0,
       elefantiforeste: 0,
       balenottereazzurre: 0,
+      trex: 0,
       campidacalcio: 0,
       terraluna: 0,
       italia: 0,
+      gorilla: 0,
     };
   }
 
@@ -47,6 +52,8 @@ class PiuomenoApp extends Component {
       elefantiasiatici: event.target.value / PESO_ELEFANTE_ASIATICO,
       elefantiforeste: event.target.value / PESO_ELEFANTE_FORESTE,
       balenottereazzurre: event.target.value / PESO_ELEFANTE_BALENOTTERA,
+      trex: event.target.value / PESO_TREX,
+      gorilla: event.target.value / PESO_GORILLA,
     })
   }
 
@@ -63,6 +70,10 @@ class PiuomenoApp extends Component {
     })
   }
 
+  handleChangeSelectPeso = (event) => {
+    console.log(event.target.value)
+  }
+
   render() {
 
     var elephant = "emoji/elephant.png";
@@ -75,6 +86,8 @@ class PiuomenoApp extends Component {
     var italy = "emoji/italy.png";
     var soccer = "emoji/soccer.png";
     var love = "emoji/love.png";
+    var trex = "emoji/trex.png";
+    var gorilla = "emoji/gorilla.png";
 
     return (
       <App>
@@ -89,7 +102,7 @@ class PiuomenoApp extends Component {
             <Section>
               <Label>
                 Chilogrammi
-            </Label>
+                </Label>
               <NumberInput
                 onChange={this.handleChangePeso} />
             </Section>
@@ -100,8 +113,12 @@ class PiuomenoApp extends Component {
                 <img src={elephant} width="24" height="24" /> <img src={india} width="24" height="24" /> ~<strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti asiatici
             <br />
                 <img src={elephant} width="24" height="24" /> <img src={tree} width="24" height="24" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
-            <br />
+                <br />
                 <img src={whale} width="24" height="24" /> ~<strong>{this.state.balenottereazzurre.toFixed(2)}</strong> balenottere azzurre
+                <br />
+                <img src={trex} width="24" height="24" /> ~<strong>{this.state.trex.toFixed(2)}</strong> T-Rex
+                <br />
+                <img src={gorilla} width="24" height="24" /> ~<strong>{this.state.gorilla.toFixed(2)}</strong> gorilla
           </Paragraph>
             </Section>
           </Tab>
