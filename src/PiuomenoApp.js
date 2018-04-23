@@ -22,6 +22,8 @@ const PESO_ELEFANTE_BALENOTTERA = 140000;
 
 const CAMPO_DA_CALCIO = 7140;
 
+const DISTANZA_TERRA_LUNA = 384400000;
+
 class PiuomenoApp extends Component {
 
   constructor(props) {
@@ -33,6 +35,7 @@ class PiuomenoApp extends Component {
       elefantiforeste: 0,
       balenottereazzurre: 0,
       campidacalcio: 0,
+      terraluna: 0,
     };
   }
 
@@ -48,6 +51,12 @@ class PiuomenoApp extends Component {
   handleChangeSuperficie = (event) => {
     this.setState({
       campidacalcio: event.target.value / CAMPO_DA_CALCIO,
+    })
+  }
+
+  handleChangeLunghezza = (event) => {
+    this.setState({
+      terraluna: event.target.value / DISTANZA_TERRA_LUNA,
     })
   }
 
@@ -71,20 +80,29 @@ class PiuomenoApp extends Component {
             </Section>
             <Section>
               <Paragraph size='large'>
-                <Emoji e="🐘" /><Emoji e="🇨🇬" /> ~<strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti africani
+                <Emoji e="🐘" /> <Emoji e="🇨🇬" /> ~<strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti africani
             <br />
-                <Emoji e="🐘" /><Emoji e="🇨🇳" /> ~<strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti asiatici
+                <Emoji e="🐘" /> <Emoji e="🇨🇳" /> ~<strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti asiatici
             <br />
-                <Emoji e="🐘" /><Emoji e="🌳" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
+                <Emoji e="🐘" /> <Emoji e="🌳" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
             <br />
                 <Emoji e="🐳" /> ~<strong>{this.state.balenottereazzurre.toFixed(2)}</strong> balenottere azzurre
           </Paragraph>
             </Section>
           </Tab>
           <Tab title='Lunghezza'>
-            <Paragraph>
-              Work in progress!
-            </Paragraph>
+            <Section>
+              <Label>
+                Metri
+            </Label>
+              <NumberInput
+                onChange={this.handleChangeLunghezza} />
+            </Section>
+            <Section>
+              <Paragraph size='large'>
+                <Emoji e="🌎" /> <Emoji e="🌔" /> ~<strong>{this.state.terraluna.toFixed(2)}</strong> distanza Terra-Luna
+          </Paragraph>
+            </Section>
           </Tab>
           <Tab title='Superficie'>
             <Section>
