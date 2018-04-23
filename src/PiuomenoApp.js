@@ -64,6 +64,18 @@ class PiuomenoApp extends Component {
   }
 
   render() {
+
+    var elephant = "emoji/elephant.png";
+    var africa = "emoji/africa.png";
+    var india = "emoji/india.png";
+    var tree = "emoji/tree.png";
+    var whale = "emoji/whale.png";
+    var earth = "emoji/earth.png";
+    var moon = "emoji/moon.png";
+    var italy = "emoji/italy.png";
+    var soccer = "emoji/soccer.png";
+    var love = "emoji/love.png";
+
     return (
       <App>
         <Header>
@@ -83,13 +95,13 @@ class PiuomenoApp extends Component {
             </Section>
             <Section>
               <Paragraph size='large'>
-                <Emoji e="elephant" /> <Emoji e="africa" /> ~<strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti africani
+                <img src={elephant} width="24" height="24" /> <img src={africa} width="24" height="24" /> ~<strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti africani
                 <br />
-                <Emoji e="elephant" /> <Emoji e="india" /> ~<strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti asiatici
+                <img src={elephant} width="24" height="24" /> <img src={india} width="24" height="24" /> ~<strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti asiatici
             <br />
-                <Emoji e="elephant" /> <Emoji e="tree" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
+                <img src={elephant} width="24" height="24" /> <img src={tree} width="24" height="24" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
             <br />
-                <Emoji e="whale" /> ~<strong>{this.state.balenottereazzurre.toFixed(2)}</strong> balenottere azzurre
+                <img src={whale} width="24" height="24" /> ~<strong>{this.state.balenottereazzurre.toFixed(2)}</strong> balenottere azzurre
           </Paragraph>
             </Section>
           </Tab>
@@ -103,7 +115,7 @@ class PiuomenoApp extends Component {
             </Section>
             <Section>
               <Paragraph size='large'>
-                <Emoji e="earth" /> <Emoji e="moon" /> ~<strong>{this.state.terraluna.toFixed(2)}</strong> distanza Terra-Luna
+                <img src={earth} width="24" height="24" /> <img src={moon} width="24" height="24" /> ~<strong>{this.state.terraluna.toFixed(2)}</strong> distanza Terra-Luna
           </Paragraph>
             </Section>
           </Tab>
@@ -117,9 +129,9 @@ class PiuomenoApp extends Component {
             </Section>
             <Section>
               <Paragraph size='large'>
-                <Emoji e="soccer" /> ~<strong>{this.state.campidacalcio.toFixed(2)}</strong> campi da calcio
+                <img src={soccer} width="24" height="24" /> ~<strong>{this.state.campidacalcio.toFixed(2)}</strong> campi da calcio
                 <br />
-                <Emoji e="italy" /> ~<strong>{this.state.italia.toFixed(2)}</strong> Italie
+                <img src={italy} width="24" height="24" /> ~<strong>{this.state.italia.toFixed(2)}</strong> Italie
           </Paragraph>
             </Section>
           </Tab>
@@ -130,7 +142,7 @@ class PiuomenoApp extends Component {
             align='center'
             pad={{ "between": "medium" }}>
             <Paragraph margin='none'>
-              creato con <Emoji e="love" /> da <a href="https://matteomanzinello.com"><strong>Matteo Manzinello</strong></a>
+              creato con <img src={love} width="24" height="24" /> da <a href="https://matteomanzinello.com"><strong>Matteo Manzinello</strong></a>
             </Paragraph>
           </Box>
         </Footer>
