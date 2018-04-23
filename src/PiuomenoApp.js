@@ -72,7 +72,12 @@ class PiuomenoApp extends Component {
           </Paragraph>
             </Section>
           </Tab>
-          <Tab title='Distanza'>
+          <Tab title='Lunghezza'>
+            <Paragraph>
+              Work in progress!
+            </Paragraph>
+          </Tab>
+          <Tab title='Superficie'>
             <Paragraph>
               Work in progress!
             </Paragraph>
