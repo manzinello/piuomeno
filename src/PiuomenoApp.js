@@ -21,6 +21,7 @@ const PESO_ELEFANTE_FORESTE = 2700;
 const PESO_ELEFANTE_BALENOTTERA = 140000;
 
 const CAMPO_DA_CALCIO = 7140;
+const ITALIA = 301338000000;
 
 const DISTANZA_TERRA_LUNA = 384400000;
 
@@ -36,6 +37,7 @@ class PiuomenoApp extends Component {
       balenottereazzurre: 0,
       campidacalcio: 0,
       terraluna: 0,
+      italia: 0,
     };
   }
 
@@ -51,6 +53,7 @@ class PiuomenoApp extends Component {
   handleChangeSuperficie = (event) => {
     this.setState({
       campidacalcio: event.target.value / CAMPO_DA_CALCIO,
+      italia: event.target.value / ITALIA,
     })
   }
 
@@ -115,6 +118,8 @@ class PiuomenoApp extends Component {
             <Section>
               <Paragraph size='large'>
                 <Emoji e="soccer" /> ~<strong>{this.state.campidacalcio.toFixed(2)}</strong> campi da calcio
+                <br />
+                <Emoji e="italy" /> ~<strong>{this.state.italia.toFixed(2)}</strong> Italie
           </Paragraph>
             </Section>
           </Tab>
