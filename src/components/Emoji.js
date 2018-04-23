@@ -7,7 +7,6 @@ class Emoji extends Component {
         this.state = {
             e: props.e
         };
-
     }
 
     render() {
