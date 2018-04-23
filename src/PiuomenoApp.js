@@ -142,7 +142,7 @@ class PiuomenoApp extends Component {
             align='center'
             pad={{ "between": "medium" }}>
             <Paragraph margin='none'>
-              creato con <img src={love} width="24" height="24" /> da <a href="https://matteomanzinello.com"><strong>Matteo Manzinello</strong></a>
+              creato con <img src={love} width="24" height="24" /> per <strong>Ilaria</strong> da <a href="https://matteomanzinello.com"><strong>Matteo</strong></a>
             </Paragraph>
           </Box>
         </Footer>
