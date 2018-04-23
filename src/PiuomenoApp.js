@@ -81,7 +81,7 @@ class PiuomenoApp extends Component {
             <Section>
               <Paragraph size='large'>
                 <Emoji e="elephant" /> <Emoji e="africa" /> ~<strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti africani
-            <br />
+                <br />
                 <Emoji e="elephant" /> <Emoji e="india" /> ~<strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti asiatici
             <br />
                 <Emoji e="elephant" /> <Emoji e="tree" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
