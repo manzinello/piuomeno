@@ -25,6 +25,7 @@ const PESO_TREX = 6100;
 const PESO_GORILLA = 160;
 
 // In metri
+const PISCINA_OLIMPIONICA = 50;
 const DISTANZA_TERRA_LUNA = 384400000;
 
 // In metri quadrati
@@ -46,6 +47,7 @@ class PiuomenoApp extends Component {
       terraluna: 0,
       italia: 0,
       gorilla: 0,
+      piscinaolimpionicalunghezza: 0,
     };
   }
 
@@ -70,10 +72,11 @@ class PiuomenoApp extends Component {
   handleChangeLunghezza = (event) => {
     this.setState({
       terraluna: event.target.value / DISTANZA_TERRA_LUNA,
+      piscinaolimpionicalunghezza: event.target.value / PISCINA_OLIMPIONICA,
     })
   }
 
-  handleChangeSelectPeso = (event) => {
+  handleChangeVolume = (event) => {
     console.log(event.target.value)
   }
 
@@ -91,6 +94,7 @@ class PiuomenoApp extends Component {
     var love = "emoji/love.png";
     var trex = "emoji/trex.png";
     var gorilla = "emoji/gorilla.png";
+    var swimmer = "emoji/swimmer.png";
 
     return (
       <App>
@@ -135,6 +139,8 @@ class PiuomenoApp extends Component {
             </Section>
             <Section>
               <Paragraph size='large'>
+                <img src={swimmer} width="24" height="24" /> ~<strong>{this.state.piscinaolimpionicalunghezza.toFixed(2)}</strong> lunghezza di una piscina olimpionica
+                <br />
                 <img src={earth} width="24" height="24" /> <img src={moon} width="24" height="24" /> ~<strong>{this.state.terraluna.toFixed(2)}</strong> distanza Terra-Luna
           </Paragraph>
             </Section>
@@ -152,6 +158,20 @@ class PiuomenoApp extends Component {
                 <img src={soccer} width="24" height="24" /> ~<strong>{this.state.campidacalcio.toFixed(2)}</strong> campi da calcio
                 <br />
                 <img src={italy} width="24" height="24" /> ~<strong>{this.state.italia.toFixed(2)}</strong> Italie
+          </Paragraph>
+            </Section>
+          </Tab>
+          <Tab title='Volume'>
+            <Section>
+              <Label>
+                Metri cubi
+            </Label>
+              <NumberInput
+                onChange={this.handleChangeVolume} />
+            </Section>
+            <Section>
+              <Paragraph size='large'>
+                Ci stiamo lavorando!
           </Paragraph>
             </Section>
           </Tab>
