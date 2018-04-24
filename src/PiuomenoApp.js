@@ -16,6 +16,7 @@ import Select from 'grommet/components/Select';
 
 import Emoji from './components/Emoji'
 
+// In chilogrammi
 const PESO_ELEFANTE_AFRICANO = 6000;
 const PESO_ELEFANTE_ASIATICO = 5400;
 const PESO_ELEFANTE_FORESTE = 2700;
@@ -23,10 +24,12 @@ const PESO_ELEFANTE_BALENOTTERA = 140000;
 const PESO_TREX = 6100;
 const PESO_GORILLA = 160;
 
+// In metri
+const DISTANZA_TERRA_LUNA = 384400000;
+
+// In metri quadrati
 const CAMPO_DA_CALCIO = 7140;
 const ITALIA = 301338000000;
-
-const DISTANZA_TERRA_LUNA = 384400000;
 
 class PiuomenoApp extends Component {
 
