@@ -30,6 +30,8 @@ const DISTANZA_TERRA_LUNA = 384400000;
 
 // In metri quadrati
 const CAMPO_DA_CALCIO = 7140;
+const CAMPO_DA_BASKET = 420;
+const CAMPO_DA_TENNIS = 260.8666;
 const ITALIA = 301338000000;
 
 class PiuomenoApp extends Component {
@@ -44,6 +46,8 @@ class PiuomenoApp extends Component {
       balenottereazzurre: 0,
       trex: 0,
       campidacalcio: 0,
+      campidabasket: 0,
+      campidatennis: 0,
       terraluna: 0,
       italia: 0,
       gorilla: 0,
@@ -65,6 +69,8 @@ class PiuomenoApp extends Component {
   handleChangeSuperficie = (event) => {
     this.setState({
       campidacalcio: event.target.value / CAMPO_DA_CALCIO,
+      campidabasket: event.target.value / CAMPO_DA_BASKET,
+      campidatennis: event.target.value / CAMPO_DA_TENNIS,
       italia: event.target.value / ITALIA,
     })
   }
@@ -95,6 +101,8 @@ class PiuomenoApp extends Component {
     var trex = "emoji/trex.png";
     var gorilla = "emoji/gorilla.png";
     var swimmer = "emoji/swimmer.png";
+    var basket = "emoji/basket.png";
+    var tennis = "emoji/tennis.png";
 
     return (
       <App>
@@ -155,7 +163,11 @@ class PiuomenoApp extends Component {
             </Section>
             <Section>
               <Paragraph size='large'>
+                <img src={tennis} width="24" height="24" /> ~<strong>{this.state.campidatennis.toFixed(2)}</strong> campi da tennis
+                <br />
                 <img src={soccer} width="24" height="24" /> ~<strong>{this.state.campidacalcio.toFixed(2)}</strong> campi da calcio
+                <br />
+                <img src={basket} width="24" height="24" /> ~<strong>{this.state.campidabasket.toFixed(2)}</strong> campi da basket
                 <br />
                 <img src={italy} width="24" height="24" /> ~<strong>{this.state.italia.toFixed(2)}</strong> Italie
           </Paragraph>
