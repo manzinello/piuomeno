@@ -126,7 +126,7 @@ class PiuomenoApp extends Component {
                 <img src={elephant} width="24" height="24" /> <img src={africa} width="24" height="24" /> ~<strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti africani
                 <br />
                 <img src={elephant} width="24" height="24" /> <img src={india} width="24" height="24" /> ~<strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti asiatici
-            <br />
+                <br />
                 <img src={elephant} width="24" height="24" /> <img src={tree} width="24" height="24" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
                 <br />
                 <img src={whale} width="24" height="24" /> ~<strong>{this.state.balenottereazzurre.toFixed(2)}</strong> balenottere azzurre
