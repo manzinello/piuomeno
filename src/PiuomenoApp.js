@@ -17,22 +17,22 @@ import Select from 'grommet/components/Select';
 import Emoji from './components/Emoji'
 
 // In chilogrammi
-const PESO_ELEFANTE_AFRICANO = 6000;
-const PESO_ELEFANTE_ASIATICO = 5400;
-const PESO_ELEFANTE_FORESTE = 2700;
-const PESO_ELEFANTE_BALENOTTERA = 140000;
-const PESO_TREX = 6100;
-const PESO_GORILLA = 160;
 const PESO_FORMICA = 0.000006;
+const PESO_GORILLA = 160;
+const PESO_ELEFANTE_FORESTE = 2700;
+const PESO_ELEFANTE_ASIATICO = 5400;
+const PESO_ELEFANTE_AFRICANO = 6000;
+const PESO_TREX = 6100;
+const PESO_ELEFANTE_BALENOTTERA = 140000;
 
 // In metri
 const PISCINA_OLIMPIONICA = 50;
 const DISTANZA_TERRA_LUNA = 384400000;
 
 // In metri quadrati
-const CAMPO_DA_CALCIO = 7140;
-const CAMPO_DA_BASKET = 420;
 const CAMPO_DA_TENNIS = 260.8666;
+const CAMPO_DA_BASKET = 420;
+const CAMPO_DA_CALCIO = 7140;
 const ITALIA = 301338000000;
 const OCEANO_ATLANTICO = 106500000000000;
 
@@ -131,19 +131,19 @@ class PiuomenoApp extends Component {
             </Section>
             <Section>
               <Paragraph size='large'>
-                <img src={elephant} width="24" height="24" /> <img src={africa} width="24" height="24" /> ~<strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti africani
-                <br />
-                <img src={elephant} width="24" height="24" /> <img src={india} width="24" height="24" /> ~<strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti asiatici
-                <br />
-                <img src={elephant} width="24" height="24" /> <img src={tree} width="24" height="24" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
-                <br />
-                <img src={whale} width="24" height="24" /> ~<strong>{this.state.balenottereazzurre.toFixed(2)}</strong> balenottere azzurre
-                <br />
-                <img src={trex} width="24" height="24" /> ~<strong>{this.state.trex.toFixed(2)}</strong> T-Rex
+                <img src={formica} width="24" height="24" /> ~<strong>{this.state.formiche.toFixed(2)}</strong> formiche
                 <br />
                 <img src={gorilla} width="24" height="24" /> ~<strong>{this.state.gorilla.toFixed(2)}</strong> gorilla
                 <br />
-                <img src={formica} width="24" height="24" /> ~<strong>{this.state.formiche.toFixed(2)}</strong> formiche
+                <img src={elephant} width="24" height="24" /> <img src={tree} width="24" height="24" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
+                <br />
+                <img src={elephant} width="24" height="24" /> <img src={india} width="24" height="24" /> ~<strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti asiatici
+                <br />
+                <img src={elephant} width="24" height="24" /> <img src={africa} width="24" height="24" /> ~<strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti africani
+                <br />
+                <img src={trex} width="24" height="24" /> ~<strong>{this.state.trex.toFixed(2)}</strong> T-Rex
+                <br />
+                <img src={whale} width="24" height="24" /> ~<strong>{this.state.balenottereazzurre.toFixed(2)}</strong> balenottere azzurre
           </Paragraph>
             </Section>
           </Tab>
@@ -175,9 +175,9 @@ class PiuomenoApp extends Component {
               <Paragraph size='large'>
                 <img src={tennis} width="24" height="24" /> ~<strong>{this.state.campidatennis.toFixed(2)}</strong> campi da tennis
                 <br />
-                <img src={soccer} width="24" height="24" /> ~<strong>{this.state.campidacalcio.toFixed(2)}</strong> campi da calcio
-                <br />
                 <img src={basket} width="24" height="24" /> ~<strong>{this.state.campidabasket.toFixed(2)}</strong> campi da basket
+                <br />
+                <img src={soccer} width="24" height="24" /> ~<strong>{this.state.campidacalcio.toFixed(2)}</strong> campi da calcio
                 <br />
                 <img src={italy} width="24" height="24" /> ~<strong>{this.state.italia.toFixed(2)}</strong> Italie 
                  <br />
