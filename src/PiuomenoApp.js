@@ -114,7 +114,8 @@ class PiuomenoApp extends Component {
 
     return (
       <App>
-        <Header>
+        <Header
+         size='large'>
           <Title>
             Più o meno
           </Title>
