@@ -34,6 +34,7 @@ const CAMPO_DA_CALCIO = 7140;
 const CAMPO_DA_BASKET = 420;
 const CAMPO_DA_TENNIS = 260.8666;
 const ITALIA = 301338000000;
+const OCEANO_ATLANTICO = 106500000000000;
 
 class PiuomenoApp extends Component {
 
@@ -54,6 +55,7 @@ class PiuomenoApp extends Component {
       gorilla: 0,
       piscinaolimpionicalunghezza: 0,
       formiche: 0,
+      oceaniatlantici: 0,
     };
   }
 
@@ -75,6 +77,7 @@ class PiuomenoApp extends Component {
       campidabasket: event.target.value / CAMPO_DA_BASKET,
       campidatennis: event.target.value / CAMPO_DA_TENNIS,
       italia: event.target.value / ITALIA,
+      oceaniatlantici: event.target.value / OCEANO_ATLANTICO,
     })
   }
 
@@ -107,6 +110,7 @@ class PiuomenoApp extends Component {
     var basket = "emoji/basket.png";
     var tennis = "emoji/tennis.png";
     var formica = "emoji/formica.png";
+    var oceanoatlantico = "emoji/oceano.png";
 
     return (
       <App>
@@ -175,7 +179,9 @@ class PiuomenoApp extends Component {
                 <br />
                 <img src={basket} width="24" height="24" /> ~<strong>{this.state.campidabasket.toFixed(2)}</strong> campi da basket
                 <br />
-                <img src={italy} width="24" height="24" /> ~<strong>{this.state.italia.toFixed(2)}</strong> Italie
+                <img src={italy} width="24" height="24" /> ~<strong>{this.state.italia.toFixed(2)}</strong> Italie 
+                 <br />
+                <img src={oceanoatlantico} width="24" height="24" /> ~<strong>{this.state.oceaniatlantici.toFixed(2)}</strong> Oceani Atlantici
           </Paragraph>
             </Section>
           </Tab>
