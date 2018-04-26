@@ -23,6 +23,7 @@ const PESO_ELEFANTE_FORESTE = 2700;
 const PESO_ELEFANTE_BALENOTTERA = 140000;
 const PESO_TREX = 6100;
 const PESO_GORILLA = 160;
+const PESO_FORMICA = 0.000006;
 
 // In metri
 const PISCINA_OLIMPIONICA = 50;
@@ -52,6 +53,7 @@ class PiuomenoApp extends Component {
       italia: 0,
       gorilla: 0,
       piscinaolimpionicalunghezza: 0,
+      formiche: 0,
     };
   }
 
@@ -63,6 +65,7 @@ class PiuomenoApp extends Component {
       balenottereazzurre: event.target.value / PESO_ELEFANTE_BALENOTTERA,
       trex: event.target.value / PESO_TREX,
       gorilla: event.target.value / PESO_GORILLA,
+      formiche: event.target.value / PESO_FORMICA,
     })
   }
 
@@ -103,6 +106,7 @@ class PiuomenoApp extends Component {
     var swimmer = "emoji/swimmer.png";
     var basket = "emoji/basket.png";
     var tennis = "emoji/tennis.png";
+    var formica = "emoji/formica.png";
 
     return (
       <App>
@@ -134,6 +138,8 @@ class PiuomenoApp extends Component {
                 <img src={trex} width="24" height="24" /> ~<strong>{this.state.trex.toFixed(2)}</strong> T-Rex
                 <br />
                 <img src={gorilla} width="24" height="24" /> ~<strong>{this.state.gorilla.toFixed(2)}</strong> gorilla
+                <br />
+                <img src={formica} width="24" height="24" /> ~<strong>{this.state.formiche.toFixed(2)}</strong> formiche
           </Paragraph>
             </Section>
           </Tab>
