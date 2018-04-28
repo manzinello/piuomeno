@@ -27,6 +27,7 @@ const PESO_ELEFANTE_BALENOTTERA = 140000;
 
 // In metri
 const PISCINA_OLIMPIONICA = 50;
+const LUNGHEZZA_CAMPO_CALCIO = 105;
 const DISTANZA_TERRA_LUNA = 384400000;
 
 // In metri quadrati
@@ -35,6 +36,7 @@ const CAMPO_DA_BASKET = 420;
 const CAMPO_DA_CALCIO = 7140;
 const ITALIA = 301338000000;
 const OCEANO_ATLANTICO = 106500000000000;
+const OCEANO_PACIFICO = 161800000000000;
 
 class PiuomenoApp extends Component {
 
@@ -56,6 +58,8 @@ class PiuomenoApp extends Component {
       piscinaolimpionicalunghezza: 0,
       formiche: 0,
       oceaniatlantici: 0,
+      oceanipacifici: 0,
+      lunghezzacampocalcio: 0,
     };
   }
 
@@ -78,12 +82,14 @@ class PiuomenoApp extends Component {
       campidatennis: event.target.value / CAMPO_DA_TENNIS,
       italia: event.target.value / ITALIA,
       oceaniatlantici: event.target.value / OCEANO_ATLANTICO,
+      oceanipacifici: event.target.value / OCEANO_PACIFICO,
     })
   }
 
   handleChangeLunghezza = (event) => {
     this.setState({
       terraluna: event.target.value / DISTANZA_TERRA_LUNA,
+      lunghezzacampocalcio: event.target.value / LUNGHEZZA_CAMPO_CALCIO,
       piscinaolimpionicalunghezza: event.target.value / PISCINA_OLIMPIONICA,
     })
   }
@@ -110,7 +116,7 @@ class PiuomenoApp extends Component {
     var basket = "emoji/basket.png";
     var tennis = "emoji/tennis.png";
     var formica = "emoji/formica.png";
-    var oceanoatlantico = "emoji/oceano.png";
+    var oceano = "emoji/oceano.png";
 
     return (
       <App>
@@ -160,6 +166,8 @@ class PiuomenoApp extends Component {
               <Paragraph size='large'>
                 <img src={swimmer} width="24" height="24" /> ~<strong>{this.state.piscinaolimpionicalunghezza.toFixed(2)}</strong> lunghezza di una piscina olimpionica
                 <br />
+                <img src={soccer} width="24" height="24" /> ~<strong>{this.state.lunghezzacampocalcio.toFixed(2)}</strong> lunghezza di un campo da calcio
+                <br />
                 <img src={earth} width="24" height="24" /> <img src={moon} width="24" height="24" /> ~<strong>{this.state.terraluna.toFixed(2)}</strong> distanza Terra-Luna
           </Paragraph>
             </Section>
@@ -182,7 +190,9 @@ class PiuomenoApp extends Component {
                 <br />
                 <img src={italy} width="24" height="24" /> ~<strong>{this.state.italia.toFixed(2)}</strong> Italie 
                  <br />
-                <img src={oceanoatlantico} width="24" height="24" /> ~<strong>{this.state.oceaniatlantici.toFixed(2)}</strong> Oceani Atlantici
+                <img src={oceano} width="24" height="24" /> ~<strong>{this.state.oceaniatlantici.toFixed(2)}</strong> Oceani Atlantici 
+                 <br />
+                <img src={oceano} width="24" height="24" /> ~<strong>{this.state.oceanipacifici.toFixed(2)}</strong> Oceani Pacifici
           </Paragraph>
             </Section>
           </Tab>
