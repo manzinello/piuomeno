@@ -19,6 +19,9 @@ import Emoji from './components/Emoji'
 // In chilogrammi
 const PESO_FORMICA = 0.000006;
 const PESO_GORILLA = 160;
+const PESO_RINOCERONTE_NERO = 1100;
+const PESO_RINOCERONTE_INDIANO = 2100;
+const PESO_RINOCERONTE_BIANCO = 2300;
 const PESO_ELEFANTE_FORESTE = 2700;
 const PESO_ELEFANTE_ASIATICO = 5400;
 const PESO_ELEFANTE_AFRICANO = 6000;
@@ -60,6 +63,9 @@ class PiuomenoApp extends Component {
       oceaniatlantici: 0,
       oceanipacifici: 0,
       lunghezzacampocalcio: 0,
+      rinocerontenero: 0,
+      rinoceronteindiano: 0,
+      rinocerontebianco: 0,
     };
   }
 
@@ -72,6 +78,9 @@ class PiuomenoApp extends Component {
       trex: event.target.value / PESO_TREX,
       gorilla: event.target.value / PESO_GORILLA,
       formiche: event.target.value / PESO_FORMICA,
+      rinocerontenero: event.target.value / PESO_RINOCERONTE_NERO,
+      rinoceronteindiano: event.target.value / PESO_RINOCERONTE_INDIANO,
+      rinocerontebianco: event.target.value / PESO_RINOCERONTE_BIANCO,
     })
   }
 
@@ -117,6 +126,11 @@ class PiuomenoApp extends Component {
     var tennis = "emoji/tennis.png";
     var formica = "emoji/formica.png";
     var oceano = "emoji/oceano.png";
+    var rino = "emoji/rino.png";
+
+    var black = "emoji/black.png";
+    var white = "emoji/white.png";
+
 
     return (
       <App>
@@ -141,6 +155,12 @@ class PiuomenoApp extends Component {
                 <img src={formica} width="24" height="24" /> ~<strong>{this.state.formiche.toFixed(2)}</strong> formiche
                 <br />
                 <img src={gorilla} width="24" height="24" /> ~<strong>{this.state.gorilla.toFixed(2)}</strong> gorilla
+                <br />
+                <img src={rino} width="24" height="24" /> <img src={black} width="24" height="24" /> ~<strong>{this.state.rinocerontenero.toFixed(2)}</strong> rinoceronti neri
+                <br />
+                <img src={rino} width="24" height="24" /> <img src={india} width="24" height="24" />  ~<strong>{this.state.rinoceronteindiano.toFixed(2)}</strong> rinoceronti indiani
+                <br />
+                <img src={rino} width="24" height="24" /> <img src={white} width="24" height="24" />  ~<strong>{this.state.rinocerontebianco.toFixed(2)}</strong> rinoceronti bianchi
                 <br />
                 <img src={elephant} width="24" height="24" /> <img src={tree} width="24" height="24" /> ~<strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti delle foreste
                 <br />
