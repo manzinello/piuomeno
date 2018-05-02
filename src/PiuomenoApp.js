@@ -137,7 +137,7 @@ class PiuomenoApp extends Component {
         <Header
          size='large'>
           <Title>
-            Più o meno
+            Più o meno ~
           </Title>
         </Header>
         <Tabs responsive={false}
