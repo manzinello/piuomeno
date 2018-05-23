@@ -40,6 +40,7 @@ const CAMPO_DA_CALCIO = 7140;
 const ITALIA = 301338000000;
 const OCEANO_ATLANTICO = 106500000000000;
 const OCEANO_PACIFICO = 161800000000000;
+const TERRA = 510100000000000;
 
 class PiuomenoApp extends Component {
 
@@ -66,6 +67,7 @@ class PiuomenoApp extends Component {
       rinocerontenero: 0,
       rinoceronteindiano: 0,
       rinocerontebianco: 0,
+      terre: 0,
     };
   }
 
@@ -92,6 +94,7 @@ class PiuomenoApp extends Component {
       italia: event.target.value / ITALIA,
       oceaniatlantici: event.target.value / OCEANO_ATLANTICO,
       oceanipacifici: event.target.value / OCEANO_PACIFICO,
+      terre: event.target.value / TERRA,
     })
   }
 
@@ -212,7 +215,9 @@ class PiuomenoApp extends Component {
                  <br />
                 <img src={oceano} width="24" height="24" /> ~<strong>{this.state.oceaniatlantici.toFixed(2)}</strong> Oceani Atlantici 
                  <br />
-                <img src={oceano} width="24" height="24" /> ~<strong>{this.state.oceanipacifici.toFixed(2)}</strong> Oceani Pacifici
+                <img src={oceano} width="24" height="24" /> ~<strong>{this.state.oceanipacifici.toFixed(2)}</strong> Oceani Pacifici 
+                 <br />
+                <img src={earth} width="24" height="24" /> ~<strong>{this.state.terre.toFixed(2)}</strong> Terre
           </Paragraph>
             </Section>
           </Tab>
