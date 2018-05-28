@@ -1,2 +1,5 @@
 # ➕ Più o meno
-React + Grommet
+App creata per paragonare le misure con unità di misura non convenzionali
+
+## built with
+creato con React e Grommet
