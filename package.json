@@ -5,8 +5,8 @@
   "homepage": "https://manzinello.github.io/piuomeno",
   "dependencies": {
     "grommet": "^1.10.1",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "react-scripts": "1.1.4"
   },
   "scripts": {
