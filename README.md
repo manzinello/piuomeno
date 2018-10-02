@@ -2,4 +2,4 @@
 App creata per paragonare le misure con unità di misura non convenzionali
 
 ## built with
-creato con React e Grommet
+creato con React (❤️)
