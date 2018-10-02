@@ -14,7 +14,7 @@ import Box from "grommet/components/Box";
 import Label from "grommet/components/Label";
 import Select from "grommet/components/Select";
 
-import Emoji from "@components/Emoji";
+import Emoji from "./components/Emoji";
 
 // In chilogrammi
 const PESO_FORMICA = 0.000006;
