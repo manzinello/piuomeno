@@ -1,16 +1,8 @@
 import React, { Component } from "react";
 
-import App from "grommet/components/App";
-import Tabs from "grommet/components/Tabs";
-import Tab from "grommet/components/Tab";
-
-import Header from "grommet/components/Header";
-import Title from "grommet/components/Title";
 import Section from "grommet/components/Section";
 import NumberInput from "grommet/components/NumberInput";
 import Paragraph from "grommet/components/Paragraph";
-import Footer from "grommet/components/Footer";
-import Box from "grommet/components/Box";
 import Label from "grommet/components/Label";
 import Select from "grommet/components/Select";
 
@@ -30,6 +22,7 @@ class PesoTab extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      peso: 0,
       num: 0,
       elefantiafricani: 0,
       elefantiasiatici: 0,
@@ -53,20 +46,61 @@ class PesoTab extends Component {
       terre: 0
     };
   }
+
   handleChangePeso = event => {
     this.setState({
-      elefantiafricani: event.target.value / PESO_ELEFANTE_AFRICANO,
-      elefantiasiatici: event.target.value / PESO_ELEFANTE_ASIATICO,
-      elefantiforeste: event.target.value / PESO_ELEFANTE_FORESTE,
-      balenottereazzurre: event.target.value / PESO_ELEFANTE_BALENOTTERA,
-      trex: event.target.value / PESO_TREX,
-      gorilla: event.target.value / PESO_GORILLA,
-      formiche: event.target.value / PESO_FORMICA,
-      rinocerontenero: event.target.value / PESO_RINOCERONTE_NERO,
-      rinoceronteindiano: event.target.value / PESO_RINOCERONTE_INDIANO,
-      rinocerontebianco: event.target.value / PESO_RINOCERONTE_BIANCO
+      peso: event.target.value
+    });
+    this.updateUI();
+  };
+
+  updateUI = () => {
+    this.setState({
+      elefantiafricani:
+        (this.state.peso * this.switchSelect()) / PESO_ELEFANTE_AFRICANO,
+      elefantiasiatici:
+        (this.state.peso * this.switchSelect()) / PESO_ELEFANTE_ASIATICO,
+      elefantiforeste:
+        (this.state.peso * this.switchSelect()) / PESO_ELEFANTE_FORESTE,
+      balenottereazzurre:
+        (this.state.peso * this.switchSelect()) / PESO_ELEFANTE_BALENOTTERA,
+      trex: (this.state.peso * this.switchSelect()) / PESO_TREX,
+      gorilla: (this.state.peso * this.switchSelect()) / PESO_GORILLA,
+      formiche: (this.state.peso * this.switchSelect()) / PESO_FORMICA,
+      rinocerontenero:
+        (this.state.peso * this.switchSelect()) / PESO_RINOCERONTE_NERO,
+      rinoceronteindiano:
+        (this.state.peso * this.switchSelect()) / PESO_RINOCERONTE_INDIANO,
+      rinocerontebianco:
+        (this.state.peso * this.switchSelect()) / PESO_RINOCERONTE_BIANCO
     });
   };
+
+  componentDidUpdate = () => {};
+
+  handleChangeSelectPeso = (target, option, value) => {
+    this.setState({
+      select: target.value
+    });
+    this.updateUI();
+  };
+
+  switchSelect = () => {
+    switch (this.state.select) {
+      case "chilogrammi":
+        return 1;
+      case "quintali":
+        return 100;
+      case "tonnellate":
+        return 1000;
+      default:
+        this.setState({
+          select: "chilogrammi"
+        });
+        return 1;
+    }
+  };
+
   render = () => {
     let elephant = "emoji/elephant.png";
     let africa = "emoji/africa.png";
@@ -95,6 +129,14 @@ class PesoTab extends Component {
         <Section>
           <Label>Chilogrammi</Label>
           <NumberInput onChange={this.handleChangePeso} />
+          <Select
+            placeHolder="None"
+            options={["chilogrammi", "quintali", "tonnellate"]}
+            inline={false}
+            multiple={false}
+            value={this.state.select}
+            onChange={this.handleChangeSelectPeso}
+          />
         </Section>
         <Section>
           <Paragraph size="large">
