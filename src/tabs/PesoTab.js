@@ -14,8 +14,6 @@ import Box from "grommet/components/Box";
 import Label from "grommet/components/Label";
 import Select from "grommet/components/Select";
 
-import Emoji from "./components/Emoji";
-
 // In chilogrammi
 const PESO_FORMICA = 0.000006;
 const PESO_GORILLA = 160;
@@ -70,30 +68,30 @@ class PesoTab extends Component {
     });
   };
   render = () => {
-    var elephant = "emoji/elephant.png";
-    var africa = "emoji/africa.png";
-    var india = "emoji/india.png";
-    var tree = "emoji/tree.png";
-    var whale = "emoji/whale.png";
-    var earth = "emoji/earth.png";
-    var moon = "emoji/moon.png";
-    var italy = "emoji/italy.png";
-    var soccer = "emoji/soccer.png";
-    var love = "emoji/love.png";
-    var trex = "emoji/trex.png";
-    var gorilla = "emoji/gorilla.png";
-    var swimmer = "emoji/swimmer.png";
-    var basket = "emoji/basket.png";
-    var tennis = "emoji/tennis.png";
-    var formica = "emoji/formica.png";
-    var oceano = "emoji/oceano.png";
-    var rino = "emoji/rino.png";
+    let elephant = "emoji/elephant.png";
+    let africa = "emoji/africa.png";
+    let india = "emoji/india.png";
+    let tree = "emoji/tree.png";
+    let whale = "emoji/whale.png";
+    let earth = "emoji/earth.png";
+    let moon = "emoji/moon.png";
+    let italy = "emoji/italy.png";
+    let soccer = "emoji/soccer.png";
+    let love = "emoji/love.png";
+    let trex = "emoji/trex.png";
+    let gorilla = "emoji/gorilla.png";
+    let swimmer = "emoji/swimmer.png";
+    let basket = "emoji/basket.png";
+    let tennis = "emoji/tennis.png";
+    let formica = "emoji/formica.png";
+    let oceano = "emoji/oceano.png";
+    let rino = "emoji/rino.png";
 
-    var black = "emoji/black.png";
-    var white = "emoji/white.png";
+    let black = "emoji/black.png";
+    let white = "emoji/white.png";
 
     return (
-      <View>
+      <div>
         <Section>
           <Label>Chilogrammi</Label>
           <NumberInput onChange={this.handleChangePeso} />
@@ -144,7 +142,7 @@ class PesoTab extends Component {
             balenottere azzurre
           </Paragraph>
         </Section>
-      </View>
+      </div>
     );
   };
 }
