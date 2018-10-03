@@ -148,3 +148,5 @@ class PesoTab extends Component {
     );
   };
 }
+
+export default PesoTab;

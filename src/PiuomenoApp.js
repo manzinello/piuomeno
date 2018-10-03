@@ -14,6 +14,8 @@ import Box from "grommet/components/Box";
 import Label from "grommet/components/Label";
 import Select from "grommet/components/Select";
 
+import PesoTab from "./tabs/PesoTab";
+
 import Emoji from "./components/Emoji";
 
 // In metri
@@ -112,6 +114,7 @@ class PiuomenoApp extends Component {
         </Header>
         <Tabs responsive={false} justify="start">
           <Tab title="Peso">
+            <PesoTab />
           </Tab>
           <Tab title="Lunghezza">
             <Section>
