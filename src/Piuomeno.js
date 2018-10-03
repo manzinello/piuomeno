@@ -32,7 +32,7 @@ const OCEANO_ATLANTICO = 106500000000000;
 const OCEANO_PACIFICO = 161800000000000;
 const TERRA = 510100000000000;
 
-class PiuomenoApp extends Component {
+class Piuomeno extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -201,4 +201,4 @@ class PiuomenoApp extends Component {
   }
 }
 
-export default PiuomenoApp;
+export default Piuomeno;

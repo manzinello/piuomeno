@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
-import PiuomenoApp from './PiuomenoApp';
+import React from "react";
+import ReactDOM from "react-dom";
+import registerServiceWorker from "./registerServiceWorker";
+import "./index.css";
+import Piuomeno from "./Piuomeno";
 
-ReactDOM.render(<PiuomenoApp />, document.getElementById('root'));
+ReactDOM.render(<Piuomeno />, document.getElementById("root"));
 registerServiceWorker();
