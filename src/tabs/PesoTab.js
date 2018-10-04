@@ -5,7 +5,6 @@ import Utils from "../utils/Utils.js";
 import Section from "grommet/components/Section";
 import NumberInput from "grommet/components/NumberInput";
 import Paragraph from "grommet/components/Paragraph";
-import Label from "grommet/components/Label";
 import Select from "grommet/components/Select";
 
 class PesoTab extends Component {
@@ -99,18 +98,18 @@ class PesoTab extends Component {
   };
 
   render = () => {
-    var elephant = "emoji/elephant.png";
-    var africa = "emoji/africa.png";
-    var india = "emoji/india.png";
-    var tree = "emoji/tree.png";
-    var whale = "emoji/whale.png";
-    var trex = "emoji/trex.png";
-    var gorilla = "emoji/gorilla.png";
-    var formica = "emoji/formica.png";
-    var rino = "emoji/rino.png";
+    let elephant = "emoji/elephant.png";
+    let africa = "emoji/africa.png";
+    let india = "emoji/india.png";
+    let tree = "emoji/tree.png";
+    let whale = "emoji/whale.png";
+    let trex = "emoji/trex.png";
+    let gorilla = "emoji/gorilla.png";
+    let formica = "emoji/formica.png";
+    let rino = "emoji/rino.png";
 
-    var black = "emoji/black.png";
-    var white = "emoji/white.png";
+    let black = "emoji/black.png";
+    let white = "emoji/white.png";
 
     return (
       <div>

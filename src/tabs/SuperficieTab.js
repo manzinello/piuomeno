@@ -5,7 +5,6 @@ import Utils from "../utils/Utils.js";
 import Section from "grommet/components/Section";
 import NumberInput from "grommet/components/NumberInput";
 import Paragraph from "grommet/components/Paragraph";
-import Label from "grommet/components/Label";
 import Select from "grommet/components/Select";
 
 class SuperficieTab extends Component {
@@ -90,12 +89,12 @@ class SuperficieTab extends Component {
   };
 
   render = () => {
-    var earth = "emoji/earth.png";
-    var italy = "emoji/italy.png";
-    var soccer = "emoji/soccer.png";
-    var basket = "emoji/basket.png";
-    var tennis = "emoji/tennis.png";
-    var oceano = "emoji/oceano.png";
+    let earth = "emoji/earth.png";
+    let italy = "emoji/italy.png";
+    let soccer = "emoji/soccer.png";
+    let basket = "emoji/basket.png";
+    let tennis = "emoji/tennis.png";
+    let oceano = "emoji/oceano.png";
 
     return (
       <div>

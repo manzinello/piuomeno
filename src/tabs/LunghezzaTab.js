@@ -5,7 +5,6 @@ import Utils from "../utils/Utils.js";
 import Section from "grommet/components/Section";
 import NumberInput from "grommet/components/NumberInput";
 import Paragraph from "grommet/components/Paragraph";
-import Label from "grommet/components/Label";
 import Select from "grommet/components/Select";
 
 class LunghezzaTab extends Component {
@@ -13,7 +12,7 @@ class LunghezzaTab extends Component {
     super(props);
     this.state = {
       lunghezza: 0,
-      select: "chilometri",
+      select: "metri",
       num: 0,
       elefantiafricani: 0,
       elefantiasiatici: 0,
@@ -86,10 +85,10 @@ class LunghezzaTab extends Component {
   };
 
   render = () => {
-    var earth = "emoji/earth.png";
-    var moon = "emoji/moon.png";
-    var soccer = "emoji/soccer.png";
-    var swimmer = "emoji/swimmer.png";
+    let earth = "emoji/earth.png";
+    let moon = "emoji/moon.png";
+    let soccer = "emoji/soccer.png";
+    let swimmer = "emoji/swimmer.png";
 
     return (
       <div>
