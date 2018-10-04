@@ -16,20 +16,6 @@ import Select from "grommet/components/Select";
 
 import PesoTab from "./tabs/PesoTab";
 
-// In metri
-const PISCINA_OLIMPIONICA = 50;
-const LUNGHEZZA_CAMPO_CALCIO = 105;
-const DISTANZA_TERRA_LUNA = 384400000;
-
-// In metri quadrati
-const CAMPO_DA_TENNIS = 260.8666;
-const CAMPO_DA_BASKET = 420;
-const CAMPO_DA_CALCIO = 7140;
-const ITALIA = 301338000000;
-const OCEANO_ATLANTICO = 106500000000000;
-const OCEANO_PACIFICO = 161800000000000;
-const TERRA = 510100000000000;
-
 class Piuomeno extends Component {
   constructor(props) {
     super(props);

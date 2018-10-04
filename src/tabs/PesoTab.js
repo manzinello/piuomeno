@@ -1,22 +1,12 @@
 import React, { Component } from "react";
 
+import Utils from "../utils/Utils.js";
+
 import Section from "grommet/components/Section";
 import NumberInput from "grommet/components/NumberInput";
 import Paragraph from "grommet/components/Paragraph";
 import Label from "grommet/components/Label";
 import Select from "grommet/components/Select";
-
-// In chilogrammi
-const PESO_FORMICA = 0.000006;
-const PESO_GORILLA = 160;
-const PESO_RINOCERONTE_NERO = 1100;
-const PESO_RINOCERONTE_INDIANO = 2100;
-const PESO_RINOCERONTE_BIANCO = 2300;
-const PESO_ELEFANTE_FORESTE = 2700;
-const PESO_ELEFANTE_ASIATICO = 5400;
-const PESO_ELEFANTE_AFRICANO = 6000;
-const PESO_TREX = 6100;
-const PESO_ELEFANTE_BALENOTTERA = 140000;
 
 class PesoTab extends Component {
   constructor(props) {
@@ -60,22 +50,24 @@ class PesoTab extends Component {
   updateUI = () => {
     this.setState({
       elefantiafricani:
-        (this.state.peso * this.switchSelect()) / PESO_ELEFANTE_AFRICANO,
+        (this.state.peso * this.switchSelect()) / Utils.PESO_ELEFANTE_AFRICANO,
       elefantiasiatici:
-        (this.state.peso * this.switchSelect()) / PESO_ELEFANTE_ASIATICO,
+        (this.state.peso * this.switchSelect()) / Utils.PESO_ELEFANTE_ASIATICO,
       elefantiforeste:
-        (this.state.peso * this.switchSelect()) / PESO_ELEFANTE_FORESTE,
+        (this.state.peso * this.switchSelect()) / Utils.PESO_ELEFANTE_FORESTE,
       balenottereazzurre:
-        (this.state.peso * this.switchSelect()) / PESO_ELEFANTE_BALENOTTERA,
-      trex: (this.state.peso * this.switchSelect()) / PESO_TREX,
-      gorilla: (this.state.peso * this.switchSelect()) / PESO_GORILLA,
-      formiche: (this.state.peso * this.switchSelect()) / PESO_FORMICA,
+        (this.state.peso * this.switchSelect()) /
+        Utils.PESO_ELEFANTE_BALENOTTERA,
+      trex: (this.state.peso * this.switchSelect()) / Utils.PESO_TREX,
+      gorilla: (this.state.peso * this.switchSelect()) / Utils.PESO_GORILLA,
+      formiche: (this.state.peso * this.switchSelect()) / Utils.PESO_FORMICA,
       rinocerontenero:
-        (this.state.peso * this.switchSelect()) / PESO_RINOCERONTE_NERO,
+        (this.state.peso * this.switchSelect()) / Utils.PESO_RINOCERONTE_NERO,
       rinoceronteindiano:
-        (this.state.peso * this.switchSelect()) / PESO_RINOCERONTE_INDIANO,
+        (this.state.peso * this.switchSelect()) /
+        Utils.PESO_RINOCERONTE_INDIANO,
       rinocerontebianco:
-        (this.state.peso * this.switchSelect()) / PESO_RINOCERONTE_BIANCO
+        (this.state.peso * this.switchSelect()) / Utils.PESO_RINOCERONTE_BIANCO
     });
   };
 
