@@ -25,11 +25,14 @@ class Piuomeno extends Component {
 
   render() {
     var love = "emoji/love.png";
+    var elephant = "emoji/elephant.png";
 
     return (
       <App>
         <Header size="large">
-          <Title>Più o meno ~</Title>
+          <Title>
+            <img src={elephant} width="24" height="24" /> Più o meno
+          </Title>
         </Header>
         <Tabs responsive={false} justify="start">
           <Tab title="Peso">
