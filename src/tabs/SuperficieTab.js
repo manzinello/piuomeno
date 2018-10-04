@@ -13,26 +13,12 @@ class SuperficieTab extends Component {
     this.state = {
       superficie: 0,
       select: "metri quadrati",
-      num: 0,
-      elefantiafricani: 0,
-      elefantiasiatici: 0,
-      elefantiforeste: 0,
-      balenottereazzurre: 0,
-      trex: 0,
       campidacalcio: 0,
       campidabasket: 0,
       campidatennis: 0,
-      terraluna: 0,
       italia: 0,
-      gorilla: 0,
-      piscinaolimpionicalunghezza: 0,
-      formiche: 0,
       oceaniatlantici: 0,
       oceanipacifici: 0,
-      lunghezzacampocalcio: 0,
-      rinocerontenero: 0,
-      rinoceronteindiano: 0,
-      rinocerontebianco: 0,
       terre: 0
     };
   }
