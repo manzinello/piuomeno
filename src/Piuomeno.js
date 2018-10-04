@@ -15,12 +15,18 @@ import SuperficieTab from "./tabs/SuperficieTab";
 import LunghezzaTab from "./tabs/LunghezzaTab";
 
 class Piuomeno extends Component {
+  state = {
+    peso: 0,
+    superficie: 0,
+    lunghezza: 0
+  };
+
   constructor(props) {
     super(props);
   }
 
-  handleChangeVolume = event => {
-    console.log(event.target.value);
+  handle = v => {
+    this.setState({ v });
   };
 
   render() {
@@ -36,7 +42,7 @@ class Piuomeno extends Component {
         </Header>
         <Tabs responsive={false} justify="start">
           <Tab title="Peso">
-            <PesoTab />
+            <PesoTab peso={this.handle} />
           </Tab>
           <Tab title="Lunghezza">
             <LunghezzaTab />

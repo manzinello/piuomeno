@@ -8,33 +8,34 @@ import Paragraph from "grommet/components/Paragraph";
 import Select from "grommet/components/Select";
 
 class PesoTab extends Component {
+  state = {
+    peso: 0,
+    select: "chilogrammi",
+    num: 0,
+    elefantiafricani: 0,
+    elefantiasiatici: 0,
+    elefantiforeste: 0,
+    balenottereazzurre: 0,
+    trex: 0,
+    campidacalcio: 0,
+    campidabasket: 0,
+    campidatennis: 0,
+    terraluna: 0,
+    italia: 0,
+    gorilla: 0,
+    piscinaolimpionicalunghezza: 0,
+    formiche: 0,
+    oceaniatlantici: 0,
+    oceanipacifici: 0,
+    lunghezzacampocalcio: 0,
+    rinocerontenero: 0,
+    rinoceronteindiano: 0,
+    rinocerontebianco: 0,
+    terre: 0
+  };
+
   constructor(props) {
     super(props);
-    this.state = {
-      peso: 0,
-      select: "chilogrammi",
-      num: 0,
-      elefantiafricani: 0,
-      elefantiasiatici: 0,
-      elefantiforeste: 0,
-      balenottereazzurre: 0,
-      trex: 0,
-      campidacalcio: 0,
-      campidabasket: 0,
-      campidatennis: 0,
-      terraluna: 0,
-      italia: 0,
-      gorilla: 0,
-      piscinaolimpionicalunghezza: 0,
-      formiche: 0,
-      oceaniatlantici: 0,
-      oceanipacifici: 0,
-      lunghezzacampocalcio: 0,
-      rinocerontenero: 0,
-      rinoceronteindiano: 0,
-      rinocerontebianco: 0,
-      terre: 0
-    };
   }
 
   handleChangePeso = event => {
