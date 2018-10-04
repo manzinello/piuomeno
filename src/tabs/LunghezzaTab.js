@@ -106,16 +106,16 @@ class LunghezzaTab extends Component {
         </Section>
         <Section>
           <Paragraph size="large">
-            <img src={swimmer} width="24" height="24" /> ~
+            <img alt="swimmer" src={swimmer} width="24" height="24" /> ~
             <strong>{this.state.piscinaolimpionicalunghezza.toFixed(2)}</strong>{" "}
             lunghezza di una piscina olimpionica
             <br />
-            <img src={soccer} width="24" height="24" /> ~
+            <img alt="soccer" src={soccer} width="24" height="24" /> ~
             <strong>{this.state.lunghezzacampocalcio.toFixed(2)}</strong>{" "}
             lunghezza di un campo da calcio
             <br />
-            <img src={earth} width="24" height="24" />{" "}
-            <img src={moon} width="24" height="24" /> ~
+            <img alt="earth" src={earth} width="24" height="24" />{" "}
+            <img alt="moon" src={moon} width="24" height="24" /> ~
             <strong>{this.state.terraluna.toFixed(2)}</strong> distanza
             Terra-Luna
           </Paragraph>

@@ -21,10 +21,6 @@ class Piuomeno extends Component {
     lunghezza: 0
   };
 
-  constructor(props) {
-    super(props);
-  }
-
   handle = v => {
     this.setState({ v });
   };
@@ -37,7 +33,8 @@ class Piuomeno extends Component {
       <App>
         <Header size="large">
           <Title>
-            <img src={elephant} width="24" height="24" /> Più o meno
+            <img alt="elephant" src={elephant} width="24" height="24" />
+            {"Più o meno"}
           </Title>
         </Header>
         <Tabs responsive={false} justify="start">
@@ -54,8 +51,8 @@ class Piuomeno extends Component {
         <Footer justify="between" size="medium">
           <Box direction="row" align="center" pad={{ between: "medium" }}>
             <Paragraph margin="none">
-              creato con <img src={love} width="24" height="24" /> per{" "}
-              <strong>Ilaria</strong> da{" "}
+              creato con <img alt="love" src={love} width="24" height="24" />{" "}
+              per <strong>Ilaria</strong> da{" "}
               <a href="https://matteomanzinello.com">
                 <strong>Matteo</strong>
               </a>

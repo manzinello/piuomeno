@@ -33,11 +33,6 @@ class PesoTab extends Component {
     rinocerontebianco: 0,
     terre: 0
   };
-
-  constructor(props) {
-    super(props);
-  }
-
   handleChangePeso = event => {
     this.setState(
       {
@@ -128,46 +123,46 @@ class PesoTab extends Component {
         </Section>
         <Section>
           <Paragraph size="large">
-            <img src={formica} width="24" height="24" /> ~
+            <img alt="formica" src={formica} width="24" height="24" /> ~
             <strong>{this.state.formiche.toFixed(2)}</strong> formiche
             <br />
-            <img src={gorilla} width="24" height="24" /> ~
+            <img alt="gorilla" src={gorilla} width="24" height="24" /> ~
             <strong>{this.state.gorilla.toFixed(2)}</strong> gorilla
             <br />
-            <img src={rino} width="24" height="24" />{" "}
-            <img src={black} width="24" height="24" /> ~
+            <img alt="rino" src={rino} width="24" height="24" />{" "}
+            <img alt="black" src={black} width="24" height="24" /> ~
             <strong>{this.state.rinocerontenero.toFixed(2)}</strong> rinoceronti
             neri
             <br />
-            <img src={rino} width="24" height="24" />{" "}
-            <img src={india} width="24" height="24" /> ~
+            <img alt="rino" src={rino} width="24" height="24" />{" "}
+            <img alt="india" src={india} width="24" height="24" /> ~
             <strong>{this.state.rinoceronteindiano.toFixed(2)}</strong>{" "}
             rinoceronti indiani
             <br />
-            <img src={rino} width="24" height="24" />{" "}
-            <img src={white} width="24" height="24" /> ~
+            <img alt="rino" src={rino} width="24" height="24" />{" "}
+            <img alt="white" src={white} width="24" height="24" /> ~
             <strong>{this.state.rinocerontebianco.toFixed(2)}</strong>{" "}
             rinoceronti bianchi
             <br />
-            <img src={elephant} width="24" height="24" />{" "}
-            <img src={tree} width="24" height="24" /> ~
+            <img alt="elephant" src={elephant} width="24" height="24" />{" "}
+            <img alt="tree" src={tree} width="24" height="24" /> ~
             <strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti
             delle foreste
             <br />
-            <img src={elephant} width="24" height="24" />{" "}
-            <img src={india} width="24" height="24" /> ~
+            <img alt="elephant" src={elephant} width="24" height="24" />{" "}
+            <img alt="india" src={india} width="24" height="24" /> ~
             <strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti
             asiatici
             <br />
-            <img src={elephant} width="24" height="24" />{" "}
-            <img src={africa} width="24" height="24" /> ~
+            <img alt="elephant" src={elephant} width="24" height="24" />{" "}
+            <img alt="africa" src={africa} width="24" height="24" /> ~
             <strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti
             africani
             <br />
-            <img src={trex} width="24" height="24" /> ~
+            <img alt="trex" src={trex} width="24" height="24" /> ~
             <strong>{this.state.trex.toFixed(2)}</strong> T-Rex
             <br />
-            <img src={whale} width="24" height="24" /> ~
+            <img alt="whale" src={whale} width="24" height="24" /> ~
             <strong>{this.state.balenottereazzurre.toFixed(2)}</strong>{" "}
             balenottere azzurre
           </Paragraph>

@@ -112,30 +112,30 @@ class SuperficieTab extends Component {
         </Section>
         <Section>
           <Paragraph size="large">
-            <img src={tennis} width="24" height="24" /> ~
+            <img alt="tennis" src={tennis} width="24" height="24" /> ~
             <strong>{this.state.campidatennis.toFixed(2)}</strong> campi da
             tennis
             <br />
-            <img src={basket} width="24" height="24" /> ~
+            <img alt="basket" src={basket} width="24" height="24" /> ~
             <strong>{this.state.campidabasket.toFixed(2)}</strong> campi da
             basket
             <br />
-            <img src={soccer} width="24" height="24" /> ~
+            <img alt="soccer" src={soccer} width="24" height="24" /> ~
             <strong>{this.state.campidacalcio.toFixed(2)}</strong> campi da
             calcio
             <br />
-            <img src={italy} width="24" height="24" /> ~
+            <img alt="italy" src={italy} width="24" height="24" /> ~
             <strong>{this.state.italia.toFixed(2)}</strong> Italie
             <br />
-            <img src={oceano} width="24" height="24" /> ~
+            <img alt="oceano" src={oceano} width="24" height="24" /> ~
             <strong>{this.state.oceaniatlantici.toFixed(2)}</strong> Oceani
             Atlantici
             <br />
-            <img src={oceano} width="24" height="24" /> ~
+            <img alt="oceano" src={oceano} width="24" height="24" /> ~
             <strong>{this.state.oceanipacifici.toFixed(2)}</strong> Oceani
             Pacifici
             <br />
-            <img src={earth} width="24" height="24" /> ~
+            <img alt="earth" src={earth} width="24" height="24" /> ~
             <strong>{this.state.terre.toFixed(2)}</strong> Terre
           </Paragraph>
         </Section>
