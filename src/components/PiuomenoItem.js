@@ -7,12 +7,14 @@ class PiuomenoItem extends Component {
     return (
       <div>
         {this.props.tag.map(value => (
-          <img
-            alt={value}
-            src={"emoji/" + value + ".png"}
-            width={emojiSize}
-            height={emojiSize}
-          />
+          <span>
+            <img
+              alt={value}
+              src={"emoji/" + value + ".png"}
+              width={emojiSize}
+              height={emojiSize}
+            />{" "}
+          </span>
         ))}{" "}
         ~<strong>{this.props.value.toFixed(2)}</strong> {this.props.text}
         <br />

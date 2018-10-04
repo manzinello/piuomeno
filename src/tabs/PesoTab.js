@@ -7,6 +7,8 @@ import NumberInput from "grommet/components/NumberInput";
 import Paragraph from "grommet/components/Paragraph";
 import Select from "grommet/components/Select";
 
+import PiuomenoItem from "../components/PiuomenoItem";
+
 class PesoTab extends Component {
   state = {
     peso: 0,
@@ -112,17 +114,21 @@ class PesoTab extends Component {
         </Section>
         <Section>
           <Paragraph size="large">
-            <img alt="formica" src={formica} width="24" height="24" /> ~
-            <strong>{this.state.formiche.toFixed(2)}</strong> formiche
-            <br />
-            <img alt="gorilla" src={gorilla} width="24" height="24" /> ~
-            <strong>{this.state.gorilla.toFixed(2)}</strong> gorilla
-            <br />
-            <img alt="rino" src={rino} width="24" height="24" />{" "}
-            <img alt="black" src={black} width="24" height="24" /> ~
-            <strong>{this.state.rinocerontenero.toFixed(2)}</strong> rinoceronti
-            neri
-            <br />
+            <PiuomenoItem
+              tag={["formica"]}
+              value={this.state.formiche}
+              text="formiche"
+            />
+            <PiuomenoItem
+              tag={["gorilla"]}
+              value={this.state.gorilla}
+              text="gorilla"
+            />
+            <PiuomenoItem
+              tag={["rino", "black"]}
+              value={this.state.rinocerontenero}
+              text="rinoceronti neri"
+            />
             <img alt="rino" src={rino} width="24" height="24" />{" "}
             <img alt="india" src={india} width="24" height="24" /> ~
             <strong>{this.state.rinoceronteindiano.toFixed(2)}</strong>{" "}
