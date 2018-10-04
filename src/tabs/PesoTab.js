@@ -99,18 +99,27 @@ class PesoTab extends Component {
   };
 
   render = () => {
-    let elephant = "emoji/elephant.png";
-    let africa = "emoji/africa.png";
-    let india = "emoji/india.png";
-    let tree = "emoji/tree.png";
-    let whale = "emoji/whale.png";
-    let trex = "emoji/trex.png";
-    let gorilla = "emoji/gorilla.png";
-    let formica = "emoji/formica.png";
-    let rino = "emoji/rino.png";
+    var elephant = "emoji/elephant.png";
+    var africa = "emoji/africa.png";
+    var india = "emoji/india.png";
+    var tree = "emoji/tree.png";
+    var whale = "emoji/whale.png";
+    var earth = "emoji/earth.png";
+    var moon = "emoji/moon.png";
+    var italy = "emoji/italy.png";
+    var soccer = "emoji/soccer.png";
+    var love = "emoji/love.png";
+    var trex = "emoji/trex.png";
+    var gorilla = "emoji/gorilla.png";
+    var swimmer = "emoji/swimmer.png";
+    var basket = "emoji/basket.png";
+    var tennis = "emoji/tennis.png";
+    var formica = "emoji/formica.png";
+    var oceano = "emoji/oceano.png";
+    var rino = "emoji/rino.png";
 
-    let black = "emoji/black.png";
-    let white = "emoji/white.png";
+    var black = "emoji/black.png";
+    var white = "emoji/white.png";
 
     return (
       <div>

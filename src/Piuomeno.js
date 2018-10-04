@@ -14,7 +14,8 @@ import Box from "grommet/components/Box";
 import Label from "grommet/components/Label";
 import Select from "grommet/components/Select";
 
-import PesoTab from "./tabs/PesoTab";
+import PesoTab from "@tabs/PesoTab";
+import SuperficieTab from "@tabs/SuperficieTab";
 
 class Piuomeno extends Component {
   constructor(props) {
@@ -56,14 +57,6 @@ class Piuomeno extends Component {
     });
   };
 
-  handleChangeLunghezza = event => {
-    this.setState({
-      terraluna: event.target.value / DISTANZA_TERRA_LUNA,
-      lunghezzacampocalcio: event.target.value / LUNGHEZZA_CAMPO_CALCIO,
-      piscinaolimpionicalunghezza: event.target.value / PISCINA_OLIMPIONICA
-    });
-  };
-
   handleChangeVolume = event => {
     console.log(event.target.value);
   };
@@ -101,28 +94,7 @@ class Piuomeno extends Component {
             <PesoTab />
           </Tab>
           <Tab title="Lunghezza">
-            <Section>
-              <Label>Metri</Label>
-              <NumberInput onChange={this.handleChangeLunghezza} />
-            </Section>
-            <Section>
-              <Paragraph size="large">
-                <img src={swimmer} width="24" height="24" /> ~
-                <strong>
-                  {this.state.piscinaolimpionicalunghezza.toFixed(2)}
-                </strong>{" "}
-                lunghezza di una piscina olimpionica
-                <br />
-                <img src={soccer} width="24" height="24" /> ~
-                <strong>{this.state.lunghezzacampocalcio.toFixed(2)}</strong>{" "}
-                lunghezza di un campo da calcio
-                <br />
-                <img src={earth} width="24" height="24" />{" "}
-                <img src={moon} width="24" height="24" /> ~
-                <strong>{this.state.terraluna.toFixed(2)}</strong> distanza
-                Terra-Luna
-              </Paragraph>
-            </Section>
+            <SuperficieTab />
           </Tab>
           <Tab title="Superficie">
             <Section>
@@ -157,15 +129,6 @@ class Piuomeno extends Component {
                 <img src={earth} width="24" height="24" /> ~
                 <strong>{this.state.terre.toFixed(2)}</strong> Terre
               </Paragraph>
-            </Section>
-          </Tab>
-          <Tab title="Volume">
-            <Section>
-              <Label>Metri cubi</Label>
-              <NumberInput onChange={this.handleChangeVolume} />
-            </Section>
-            <Section>
-              <Paragraph size="large">Ci stiamo lavorando!</Paragraph>
             </Section>
           </Tab>
         </Tabs>
