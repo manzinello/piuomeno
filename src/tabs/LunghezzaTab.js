@@ -12,8 +12,8 @@ class LunghezzaTab extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      peso: 0,
-      select: "chilogrammi",
+      lunghezza: 0,
+      select: "chilometri",
       num: 0,
       elefantiafricani: 0,
       elefantiasiatici: 0,
@@ -50,9 +50,11 @@ class LunghezzaTab extends Component {
   updateUI = () => {
     this.setState({
       terraluna:
-        (this.state.lunghezza * this.switchSelect()) / Utils.DISTANZA_TERRA_LUNA,
+        (this.state.lunghezza * this.switchSelect()) /
+        Utils.DISTANZA_TERRA_LUNA,
       lunghezzacampocalcio:
-        (this.state.lunghezza * this.switchSelect()) / Utils.LUNGHEZZA_CAMPO_CALCIO,
+        (this.state.lunghezza * this.switchSelect()) /
+        Utils.LUNGHEZZA_CAMPO_CALCIO,
       piscinaolimpionicalunghezza:
         (this.state.lunghezza * this.switchSelect()) / Utils.PISCINA_OLIMPIONICA
     });
@@ -60,7 +62,7 @@ class LunghezzaTab extends Component {
 
   componentDidUpdate = () => {};
 
-  handleChangeSelectPeso = (target, option, value) => {
+  handleChangeSelectLunghezza = (target, option, value) => {
     this.setState(
       {
         select: target.value
@@ -71,48 +73,36 @@ class LunghezzaTab extends Component {
 
   switchSelect = () => {
     switch (this.state.select) {
-      case "chilogrammi":
+      case "metri":
         return 1;
-      case "quintali":
-        return 100;
-      case "tonnellate":
+      case "chilometri":
         return 1000;
       default:
         this.setState({
-          select: "chilogrammi"
+          select: "metri"
         });
         return 1;
     }
   };
 
   render = () => {
-    var elephant = "emoji/elephant.png";
-    var africa = "emoji/africa.png";
-    var india = "emoji/india.png";
-    var tree = "emoji/tree.png";
-    var whale = "emoji/whale.png";
     var earth = "emoji/earth.png";
     var moon = "emoji/moon.png";
-    var italy = "emoji/italy.png";
     var soccer = "emoji/soccer.png";
-    var love = "emoji/love.png";
-    var trex = "emoji/trex.png";
-    var gorilla = "emoji/gorilla.png";
     var swimmer = "emoji/swimmer.png";
-    var basket = "emoji/basket.png";
-    var tennis = "emoji/tennis.png";
-    var formica = "emoji/formica.png";
-    var oceano = "emoji/oceano.png";
-    var rino = "emoji/rino.png";
-
-    var black = "emoji/black.png";
-    var white = "emoji/white.png";
 
     return (
       <div>
         <Section>
           <Label>Metri</Label>
           <NumberInput onChange={this.handleChangeLunghezza} />
+          <Select
+            options={["metri", "chilometri"]}
+            inline={false}
+            multiple={false}
+            value={this.state.select}
+            onChange={this.handleChangeSelectLunghezza}
+          />
         </Section>
         <Section>
           <Paragraph size="large">

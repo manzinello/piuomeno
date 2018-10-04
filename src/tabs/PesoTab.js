@@ -73,7 +73,7 @@ class PesoTab extends Component {
 
   componentDidUpdate = () => {};
 
-  handleChangeSelectPeso = (target, option, value) => {
+  handleChangeSelectPeso = target => {
     this.setState(
       {
         select: target.value
@@ -104,18 +104,9 @@ class PesoTab extends Component {
     var india = "emoji/india.png";
     var tree = "emoji/tree.png";
     var whale = "emoji/whale.png";
-    var earth = "emoji/earth.png";
-    var moon = "emoji/moon.png";
-    var italy = "emoji/italy.png";
-    var soccer = "emoji/soccer.png";
-    var love = "emoji/love.png";
     var trex = "emoji/trex.png";
     var gorilla = "emoji/gorilla.png";
-    var swimmer = "emoji/swimmer.png";
-    var basket = "emoji/basket.png";
-    var tennis = "emoji/tennis.png";
     var formica = "emoji/formica.png";
-    var oceano = "emoji/oceano.png";
     var rino = "emoji/rino.png";
 
     var black = "emoji/black.png";
