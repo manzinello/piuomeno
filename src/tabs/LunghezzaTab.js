@@ -62,7 +62,7 @@ class LunghezzaTab extends Component {
 
   componentDidUpdate = () => {};
 
-  handleChangeSelectLunghezza = (target, option, value) => {
+  handleChangeSelectLunghezza = target => {
     this.setState(
       {
         select: target.value

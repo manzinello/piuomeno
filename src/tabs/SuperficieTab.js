@@ -66,7 +66,7 @@ class SuperficieTab extends Component {
 
   componentDidUpdate = () => {};
 
-  handleChangeSelectSuperficie = (target, option, value) => {
+  handleChangeSelectSuperficie = target => {
     this.setState(
       {
         select: target.value
