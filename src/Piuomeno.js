@@ -49,13 +49,17 @@ class Piuomeno extends Component {
           </Tab>
         </Tabs>
         <Footer justify="between" size="medium">
-          <Box direction="row" align="center" pad={{ between: "medium" }}>
+          <Box pad={{ between: "small" }}>
             <Paragraph margin="none">
               creato con <img alt="love" src={love} width="24" height="24" />{" "}
               per <strong>Ilaria</strong> da{" "}
               <a href="https://matteomanzinello.com">
                 <strong>Matteo</strong>
               </a>
+            </Paragraph>
+            <Paragraph size="small" margin="none">
+              Più o meno è un progetto <strong>open source</strong>, trovi tutto
+              il suo codice su <a href="">GitHub</a>
             </Paragraph>
           </Box>
         </Footer>
