@@ -5,9 +5,9 @@ const emojiSize = 24;
 class PiuomenoItem extends Component {
   render = () => {
     return (
-      <div>
+      <span>
         {this.props.tag.map(value => (
-          <span>
+          <span key={value.toString()}>
             <img
               alt={value}
               src={"emoji/" + value + ".png"}
@@ -18,7 +18,7 @@ class PiuomenoItem extends Component {
         ))}{" "}
         ~<strong>{this.props.value.toFixed(2)}</strong> {this.props.text}
         <br />
-      </div>
+      </span>
     );
   };
 }
