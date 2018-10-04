@@ -53,13 +53,24 @@ class Piuomeno extends Component {
             <Paragraph margin="none">
               creato con <img alt="love" src={love} width="24" height="24" />{" "}
               per <strong>Ilaria</strong> da{" "}
-              <a href="https://matteomanzinello.com">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://matteomanzinello.com"
+              >
                 <strong>Matteo</strong>
               </a>
             </Paragraph>
             <Paragraph size="small" margin="none">
               Più o meno è un progetto <strong>open source</strong>, trovi tutto
-              il suo codice su <a href="">GitHub</a>
+              il suo codice su{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/manzinello/piuomeno"
+              >
+                GitHub
+              </a>
             </Paragraph>
           </Box>
         </Footer>
