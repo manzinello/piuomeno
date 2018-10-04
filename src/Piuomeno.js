@@ -16,8 +16,6 @@ import Select from "grommet/components/Select";
 
 import PesoTab from "./tabs/PesoTab";
 
-import Emoji from "./components/Emoji";
-
 // In metri
 const PISCINA_OLIMPIONICA = 50;
 const LUNGHEZZA_CAMPO_CALCIO = 105;

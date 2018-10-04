@@ -23,6 +23,7 @@ class PesoTab extends Component {
     super(props);
     this.state = {
       peso: 0,
+      select: "chilogrammi",
       num: 0,
       elefantiafricani: 0,
       elefantiasiatici: 0,
@@ -48,10 +49,12 @@ class PesoTab extends Component {
   }
 
   handleChangePeso = event => {
-    this.setState({
-      peso: event.target.value
-    });
-    this.updateUI();
+    this.setState(
+      {
+        peso: event.target.value
+      },
+      () => this.updateUI()
+    );
   };
 
   updateUI = () => {
@@ -79,10 +82,12 @@ class PesoTab extends Component {
   componentDidUpdate = () => {};
 
   handleChangeSelectPeso = (target, option, value) => {
-    this.setState({
-      select: target.value
-    });
-    this.updateUI();
+    this.setState(
+      {
+        select: target.value
+      },
+      () => this.updateUI()
+    );
   };
 
   switchSelect = () => {
@@ -107,18 +112,9 @@ class PesoTab extends Component {
     let india = "emoji/india.png";
     let tree = "emoji/tree.png";
     let whale = "emoji/whale.png";
-    let earth = "emoji/earth.png";
-    let moon = "emoji/moon.png";
-    let italy = "emoji/italy.png";
-    let soccer = "emoji/soccer.png";
-    let love = "emoji/love.png";
     let trex = "emoji/trex.png";
     let gorilla = "emoji/gorilla.png";
-    let swimmer = "emoji/swimmer.png";
-    let basket = "emoji/basket.png";
-    let tennis = "emoji/tennis.png";
     let formica = "emoji/formica.png";
-    let oceano = "emoji/oceano.png";
     let rino = "emoji/rino.png";
 
     let black = "emoji/black.png";
@@ -130,7 +126,6 @@ class PesoTab extends Component {
           <Label>Chilogrammi</Label>
           <NumberInput onChange={this.handleChangePeso} />
           <Select
-            placeHolder="None"
             options={["chilogrammi", "quintali", "tonnellate"]}
             inline={false}
             multiple={false}
