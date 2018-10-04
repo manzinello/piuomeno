@@ -94,15 +94,16 @@ class LunghezzaTab extends Component {
     return (
       <div>
         <Section>
-          <Label>Metri</Label>
           <NumberInput onChange={this.handleChangeLunghezza} />
-          <Select
-            options={["metri", "chilometri"]}
-            inline={false}
-            multiple={false}
-            value={this.state.select}
-            onChange={this.handleChangeSelectLunghezza}
-          />
+          <div className="piuomeno-select">
+            <Select
+              options={["metri", "chilometri"]}
+              inline={false}
+              multiple={false}
+              value={this.state.select}
+              onChange={this.handleChangeSelectLunghezza}
+            />
+          </div>
         </Section>
         <Section>
           <Paragraph size="large">

@@ -100,15 +100,16 @@ class SuperficieTab extends Component {
     return (
       <div>
         <Section>
-          <Label>Metri quadrati</Label>
           <NumberInput onChange={this.handleChangeSuperficie} />
-          <Select
-            options={["metri quadrati", "chilometri quadrati"]}
-            inline={false}
-            multiple={false}
-            value={this.state.select}
-            onChange={this.handleChangeSelectSuperficie}
-          />
+          <div className="piuomeno-select">
+            <Select
+              options={["metri quadrati", "chilometri quadrati"]}
+              inline={false}
+              multiple={false}
+              value={this.state.select}
+              onChange={this.handleChangeSelectSuperficie}
+            />
+          </div>
         </Section>
         <Section>
           <Paragraph size="large">

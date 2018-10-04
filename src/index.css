@@ -4,3 +4,8 @@ body {
   padding-right: 20px;
   font-family: sans-serif;
 }
+
+.piuomeno-select {
+  margin-top: 20px;
+  max-width: 195px;
+}
