@@ -6,6 +6,7 @@ import Section from "grommet/components/Section";
 import NumberInput from "grommet/components/NumberInput";
 import Paragraph from "grommet/components/Paragraph";
 import Select from "grommet/components/Select";
+import PiuomenoItem from "../components/PiuomenoItem.js";
 
 class PesoTab extends Component {
   state = {
@@ -123,6 +124,11 @@ class PesoTab extends Component {
         </Section>
         <Section>
           <Paragraph size="large">
+            <PiuomenoItem
+              tag={["formica"]}
+              value={this.state.formiche}
+              text="Formiche"
+            />
             <img alt="formica" src={formica} width="24" height="24" /> ~
             <strong>{this.state.formiche.toFixed(2)}</strong> formiche
             <br />

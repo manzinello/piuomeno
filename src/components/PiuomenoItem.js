@@ -14,9 +14,11 @@ class PiuomenoItem extends Component {
             height={emojiSize}
           />
         ))}{" "}
-        ~<strong>{this.props.value.toFixed(2)}</strong> {this.state.text}
+        ~<strong>{this.props.value.toFixed(2)}</strong> {this.props.text}
         <br />
       </div>
     );
   };
 }
+
+export default PiuomenoItem;
