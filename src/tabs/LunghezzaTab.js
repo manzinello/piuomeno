@@ -7,6 +7,8 @@ import NumberInput from "grommet/components/NumberInput";
 import Paragraph from "grommet/components/Paragraph";
 import Select from "grommet/components/Select";
 
+import PiuomenoItem from "../components/PiuomenoItem";
+
 class LunghezzaTab extends Component {
   constructor(props) {
     super(props);
@@ -67,11 +69,6 @@ class LunghezzaTab extends Component {
   };
 
   render = () => {
-    let earth = "emoji/earth.png";
-    let moon = "emoji/moon.png";
-    let soccer = "emoji/soccer.png";
-    let swimmer = "emoji/swimmer.png";
-
     return (
       <div>
         <Section>
@@ -88,18 +85,21 @@ class LunghezzaTab extends Component {
         </Section>
         <Section>
           <Paragraph size="large">
-            <img alt="swimmer" src={swimmer} width="24" height="24" /> ~
-            <strong>{this.state.piscinaolimpionicalunghezza.toFixed(2)}</strong>{" "}
-            lunghezza di una piscina olimpionica
-            <br />
-            <img alt="soccer" src={soccer} width="24" height="24" /> ~
-            <strong>{this.state.lunghezzacampocalcio.toFixed(2)}</strong>{" "}
-            lunghezza di un campo da calcio
-            <br />
-            <img alt="earth" src={earth} width="24" height="24" />{" "}
-            <img alt="moon" src={moon} width="24" height="24" /> ~
-            <strong>{this.state.terraluna.toFixed(2)}</strong> distanza
-            Terra-Luna
+            <PiuomenoItem
+              tag={["swimmer"]}
+              value={this.state.piscinaolimpionicalunghezza}
+              text="lunghezza di una piscina olimpionica"
+            />
+            <PiuomenoItem
+              tag={["soccer"]}
+              value={this.state.lunghezzacampocalcio}
+              text="lunghezza di un campo da calcio"
+            />
+            <PiuomenoItem
+              tag={["earth", "moon"]}
+              value={this.state.terraluna}
+              text="distanza Terra-Luna"
+            />
           </Paragraph>
         </Section>
       </div>

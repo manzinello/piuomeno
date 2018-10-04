@@ -7,6 +7,8 @@ import NumberInput from "grommet/components/NumberInput";
 import Paragraph from "grommet/components/Paragraph";
 import Select from "grommet/components/Select";
 
+import PiuomenoItem from "../components/PiuomenoItem";
+
 class SuperficieTab extends Component {
   constructor(props) {
     super(props);
@@ -75,13 +77,6 @@ class SuperficieTab extends Component {
   };
 
   render = () => {
-    let earth = "emoji/earth.png";
-    let italy = "emoji/italy.png";
-    let soccer = "emoji/soccer.png";
-    let basket = "emoji/basket.png";
-    let tennis = "emoji/tennis.png";
-    let oceano = "emoji/oceano.png";
-
     return (
       <div>
         <Section>
@@ -98,31 +93,41 @@ class SuperficieTab extends Component {
         </Section>
         <Section>
           <Paragraph size="large">
-            <img alt="tennis" src={tennis} width="24" height="24" /> ~
-            <strong>{this.state.campidatennis.toFixed(2)}</strong> campi da
-            tennis
-            <br />
-            <img alt="basket" src={basket} width="24" height="24" /> ~
-            <strong>{this.state.campidabasket.toFixed(2)}</strong> campi da
-            basket
-            <br />
-            <img alt="soccer" src={soccer} width="24" height="24" /> ~
-            <strong>{this.state.campidacalcio.toFixed(2)}</strong> campi da
-            calcio
-            <br />
-            <img alt="italy" src={italy} width="24" height="24" /> ~
-            <strong>{this.state.italia.toFixed(2)}</strong> Italie
-            <br />
-            <img alt="oceano" src={oceano} width="24" height="24" /> ~
-            <strong>{this.state.oceaniatlantici.toFixed(2)}</strong> Oceani
-            Atlantici
-            <br />
-            <img alt="oceano" src={oceano} width="24" height="24" /> ~
-            <strong>{this.state.oceanipacifici.toFixed(2)}</strong> Oceani
-            Pacifici
-            <br />
-            <img alt="earth" src={earth} width="24" height="24" /> ~
-            <strong>{this.state.terre.toFixed(2)}</strong> Terre
+            <PiuomenoItem
+              tag={["tennis"]}
+              value={this.state.campidatennis}
+              text="campi da tennis"
+            />
+            <PiuomenoItem
+              tag={["basket"]}
+              value={this.state.campidabasket}
+              text="campi da basket"
+            />
+            <PiuomenoItem
+              tag={["soccer"]}
+              value={this.state.campidacalcio}
+              text="campi da calcio"
+            />
+            <PiuomenoItem
+              tag={["italy"]}
+              value={this.state.italia}
+              text="Italie"
+            />
+            <PiuomenoItem
+              tag={["oceano"]}
+              value={this.state.oceaniatlantici}
+              text="Oceani Atlantici"
+            />
+            <PiuomenoItem
+              tag={["oceano"]}
+              value={this.state.oceanipacifici}
+              text="Oceani Pacifici"
+            />
+            <PiuomenoItem
+              tag={["earth"]}
+              value={this.state.terre}
+              text="Terre"
+            />
           </Paragraph>
         </Section>
       </div>
