@@ -1,4 +1,4 @@
-# ➕ Più o meno
+# 🐘 Più o meno
 
 App creata per paragonare le misure con unità di misura non convenzionali
 
