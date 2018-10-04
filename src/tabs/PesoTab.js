@@ -85,19 +85,6 @@ class PesoTab extends Component {
   };
 
   render = () => {
-    let elephant = "emoji/elephant.png";
-    let africa = "emoji/africa.png";
-    let india = "emoji/india.png";
-    let tree = "emoji/tree.png";
-    let whale = "emoji/whale.png";
-    let trex = "emoji/trex.png";
-    let gorilla = "emoji/gorilla.png";
-    let formica = "emoji/formica.png";
-    let rino = "emoji/rino.png";
-
-    let black = "emoji/black.png";
-    let white = "emoji/white.png";
-
     return (
       <div>
         <Section>
@@ -129,37 +116,37 @@ class PesoTab extends Component {
               value={this.state.rinocerontenero}
               text="rinoceronti neri"
             />
-            <img alt="rino" src={rino} width="24" height="24" />{" "}
-            <img alt="india" src={india} width="24" height="24" /> ~
-            <strong>{this.state.rinoceronteindiano.toFixed(2)}</strong>{" "}
-            rinoceronti indiani
-            <br />
-            <img alt="rino" src={rino} width="24" height="24" />{" "}
-            <img alt="white" src={white} width="24" height="24" /> ~
-            <strong>{this.state.rinocerontebianco.toFixed(2)}</strong>{" "}
-            rinoceronti bianchi
-            <br />
-            <img alt="elephant" src={elephant} width="24" height="24" />{" "}
-            <img alt="tree" src={tree} width="24" height="24" /> ~
-            <strong>{this.state.elefantiforeste.toFixed(2)}</strong> elefanti
-            delle foreste
-            <br />
-            <img alt="elephant" src={elephant} width="24" height="24" />{" "}
-            <img alt="india" src={india} width="24" height="24" /> ~
-            <strong>{this.state.elefantiasiatici.toFixed(2)}</strong> elefanti
-            asiatici
-            <br />
-            <img alt="elephant" src={elephant} width="24" height="24" />{" "}
-            <img alt="africa" src={africa} width="24" height="24" /> ~
-            <strong>{this.state.elefantiafricani.toFixed(2)}</strong> elefanti
-            africani
-            <br />
-            <img alt="trex" src={trex} width="24" height="24" /> ~
-            <strong>{this.state.trex.toFixed(2)}</strong> T-Rex
-            <br />
-            <img alt="whale" src={whale} width="24" height="24" /> ~
-            <strong>{this.state.balenottereazzurre.toFixed(2)}</strong>{" "}
-            balenottere azzurre
+            <PiuomenoItem
+              tag={["rino", "india"]}
+              value={this.state.rinoceronteindiano}
+              text="rinoceronti indiani"
+            />
+            <PiuomenoItem
+              tag={["rino", "white"]}
+              value={this.state.rinocerontebianco}
+              text="rinoceronti bianchi"
+            />
+            <PiuomenoItem
+              tag={["elephant", "tree"]}
+              value={this.state.elefantiforeste}
+              text="elefanti delle foreste"
+            />
+            <PiuomenoItem
+              tag={["elephant", "india"]}
+              value={this.state.elefantiasiatici}
+              text="elefanti asiatici"
+            />
+            <PiuomenoItem
+              tag={["elephant", "africa"]}
+              value={this.state.elefantiafricani}
+              text="elefanti africani"
+            />
+            <PiuomenoItem tag={["trex"]} value={this.state.trex} text="T-Rex" />
+            <PiuomenoItem
+              tag={["whale"]}
+              value={this.state.balenottereazzurre}
+              text="balenottere azzurre"
+            />
           </Paragraph>
         </Section>
       </div>
