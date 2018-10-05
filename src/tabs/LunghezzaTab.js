@@ -72,7 +72,11 @@ class LunghezzaTab extends Component {
     return (
       <div>
         <Section>
-          <NumberInput onChange={this.handleChangeLunghezza} />
+          <NumberInput
+            defaultValue={0}
+            min={0}
+            onChange={this.handleChangeLunghezza}
+          />
           <div className="piuomeno-select">
             <Select
               options={["metri", "chilometri"]}

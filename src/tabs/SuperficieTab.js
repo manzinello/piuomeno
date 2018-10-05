@@ -80,7 +80,11 @@ class SuperficieTab extends Component {
     return (
       <div>
         <Section>
-          <NumberInput onChange={this.handleChangeSuperficie} />
+          <NumberInput
+            defaultValue={0}
+            min={0}
+            onChange={this.handleChangeSuperficie}
+          />
           <div className="piuomeno-select">
             <Select
               options={["metri quadrati", "chilometri quadrati"]}

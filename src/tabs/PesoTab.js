@@ -88,7 +88,11 @@ class PesoTab extends Component {
     return (
       <div>
         <Section>
-          <NumberInput onChange={this.handleChangePeso} />
+          <NumberInput
+            defaultValue={0}
+            min={0}
+            onChange={this.handleChangePeso}
+          />
           <div className="piuomeno-select">
             <Select
               options={["chilogrammi", "quintali", "tonnellate"]}
