@@ -14,6 +14,8 @@ import PesoTab from "./tabs/PesoTab";
 import SuperficieTab from "./tabs/SuperficieTab";
 import LunghezzaTab from "./tabs/LunghezzaTab";
 
+import PiuomenoVersion from "./components/PiuomenoVersion";
+
 class Piuomeno extends Component {
   state = {
     peso: 0,
@@ -51,7 +53,13 @@ class Piuomeno extends Component {
         <Footer justify="between" size="medium">
           <Box pad={{ between: "small" }}>
             <Paragraph margin="none">
-              creato con <img alt="love" src={love} width="24" height="24" />{" "}
+              Più o meno (versione <PiuomenoVersion />
+              ), creato con <img
+                alt="love"
+                src={love}
+                width="24"
+                height="24"
+              />{" "}
               per <strong>Ilaria</strong> da{" "}
               <a
                 target="_blank"
