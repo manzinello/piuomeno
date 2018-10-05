@@ -6,8 +6,8 @@ class PiuomenoItem extends Component {
   render = () => {
     return (
       <span>
-        {this.props.tag.map(value => (
-          <PiuomenoEmoji tag={value} />
+        {this.props.tag.map(v => (
+          <PiuomenoEmoji emoji={v} />
         ))}{" "}
         ~<strong>{this.props.value.toFixed(2)}</strong> {this.props.text}
         <br />

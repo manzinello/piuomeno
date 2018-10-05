@@ -5,10 +5,10 @@ const emojiSize = 24;
 class PiuomenoEmoji extends Component {
   render = () => {
     return (
-      <span key={this.props.tag.toString()}>
+      <span key={this.props.emoji.toString()}>
         <img
-          alt={this.props.tag}
-          src={"emoji/" + this.props.tag + ".png"}
+          alt={this.props.emoji}
+          src={"emoji/" + this.props.emoji + ".png"}
           width={emojiSize}
           height={emojiSize}
         />{" "}
