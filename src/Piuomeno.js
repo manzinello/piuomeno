@@ -13,6 +13,7 @@ import Box from "grommet/components/Box";
 import PesoTab from "./tabs/PesoTab";
 import SuperficieTab from "./tabs/SuperficieTab";
 import LunghezzaTab from "./tabs/LunghezzaTab";
+import ValutaTab from "./tabs/ValutaTab";
 
 import PiuomenoVersion from "./components/PiuomenoVersion";
 
@@ -48,6 +49,9 @@ class Piuomeno extends Component {
           </Tab>
           <Tab title="Superficie">
             <SuperficieTab />
+          </Tab>
+          <Tab title="Valuta">
+            <ValutaTab />
           </Tab>
         </Tabs>
         <Footer justify="between" size="medium">
