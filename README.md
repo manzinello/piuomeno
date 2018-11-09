@@ -5,3 +5,7 @@ App creata per paragonare le misure con unità di misura non convenzionali
 ## built with
 
 creato con React (❤️)
+
+# deploy
+
+https://piuomeno.netlify.com/
