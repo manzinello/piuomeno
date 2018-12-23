@@ -22,7 +22,8 @@ class PesoTab extends Component {
     formiche: 0,
     rinocerontenero: 0,
     rinoceronteindiano: 0,
-    rinocerontebianco: 0
+    rinocerontebianco: 0,
+    matteomanzinellopeso: 0
   };
   handleChangePeso = event => {
     this.setState(
@@ -53,7 +54,9 @@ class PesoTab extends Component {
         (this.state.peso * this.switchSelect()) /
         Utils.PESO_RINOCERONTE_INDIANO,
       rinocerontebianco:
-        (this.state.peso * this.switchSelect()) / Utils.PESO_RINOCERONTE_BIANCO
+        (this.state.peso * this.switchSelect()) / Utils.PESO_RINOCERONTE_BIANCO,
+      matteomanzinellopeso:
+        (this.state.peso * this.switchSelect()) / Utils.MATTEOMANZINELLO_PESO
     });
   };
 
@@ -109,6 +112,11 @@ class PesoTab extends Component {
               tag={["formica"]}
               value={this.state.formiche}
               text="formiche"
+            />
+            <PiuomenoItem
+              tag={["matteomanzinello-favicon"]}
+              value={this.state.matteomanzinellopeso}
+              text="Matteo Manzinello"
             />
             <PiuomenoItem
               tag={["gorilla"]}

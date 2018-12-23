@@ -15,7 +15,8 @@ class ValutaTab extends Component {
     this.state = {
       valuta: 0,
       select: "euro",
-      goleador: 0
+      goleador: 0,
+      caffe: 0
     };
   }
 
@@ -30,7 +31,8 @@ class ValutaTab extends Component {
 
   updateUI = () => {
     this.setState({
-      goleador: (this.state.valuta * this.switchSelect()) / Utils.GOLEADOR
+      goleador: (this.state.valuta * this.switchSelect()) / Utils.GOLEADOR,
+      caffe: (this.state.valuta * this.switchSelect()) / Utils.CAFFE
     });
   };
 
@@ -82,6 +84,11 @@ class ValutaTab extends Component {
               tag={["goleador"]}
               value={this.state.goleador}
               text="goleador"
+            />
+            <PiuomenoItem
+              tag={["coffee"]}
+              value={this.state.caffe}
+              text="caffè"
             />
           </Paragraph>
         </Section>
