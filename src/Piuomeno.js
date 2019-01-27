@@ -17,6 +17,13 @@ import ValutaTab from "./tabs/ValutaTab";
 
 import PiuomenoVersion from "./components/PiuomenoVersion";
 
+const contentful = require("contentful");
+const client = contentful.createClient({
+  space: "ngkko1w843tf",
+  accessToken:
+    "96f66a8f02f3078f739071aed3e90664f69f70237fc82d3298c29f5dbed31115"
+});
+
 class Piuomeno extends Component {
   state = {
     peso: 0,
@@ -26,6 +33,13 @@ class Piuomeno extends Component {
 
   handle = v => {
     this.setState({ v });
+  };
+
+  componentDidMount = () => {
+    client
+      .getEntries()
+      .then(response => console.log(response.items))
+      .catch(console.error);
   };
 
   render() {
