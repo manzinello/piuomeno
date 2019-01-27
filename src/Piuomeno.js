@@ -21,9 +21,8 @@ import PiuomenoVersion from "./components/PiuomenoVersion";
 
 const contentful = require("contentful");
 const client = contentful.createClient({
-  space: "ngkko1w843tf",
-  accessToken:
-    "96f66a8f02f3078f739071aed3e90664f69f70237fc82d3298c29f5dbed31115"
+  space: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_API_KEY
 });
 
 class Piuomeno extends Component {
