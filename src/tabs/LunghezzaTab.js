@@ -17,7 +17,8 @@ class LunghezzaTab extends Component {
       select: "metri",
       terraluna: 0,
       lunghezzacampocalcio: 0,
-      piscinaolimpionicalunghezza: 0
+      piscinaolimpionicalunghezza: 0,
+      lunghezzaboeing747: 0
     };
   }
 
@@ -39,7 +40,10 @@ class LunghezzaTab extends Component {
         (this.state.lunghezza * this.switchSelect()) /
         Utils.LUNGHEZZA_CAMPO_CALCIO,
       piscinaolimpionicalunghezza:
-        (this.state.lunghezza * this.switchSelect()) / Utils.PISCINA_OLIMPIONICA
+        (this.state.lunghezza * this.switchSelect()) /
+        Utils.PISCINA_OLIMPIONICA,
+      lunghezzaboeing747:
+        (this.state.lunghezza * this.switchSelect()) / Utils.LUNGHEZZA_BOEING747
     });
   };
 
@@ -93,6 +97,11 @@ class LunghezzaTab extends Component {
               tag={["swimmer"]}
               value={this.state.piscinaolimpionicalunghezza}
               text="lunghezza di una piscina olimpionica"
+            />
+            <PiuomenoItem
+              tag={["plane"]}
+              value={this.state.lunghezzaboeing747}
+              text="Boeing 747-400"
             />
             <PiuomenoItem
               tag={["soccer"]}

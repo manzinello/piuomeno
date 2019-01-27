@@ -23,7 +23,8 @@ class PesoTab extends Component {
     rinocerontenero: 0,
     rinoceronteindiano: 0,
     rinocerontebianco: 0,
-    matteomanzinellopeso: 0
+    matteomanzinellopeso: 0,
+    boeing747peso: 0
   };
   handleChangePeso = event => {
     this.setState(
@@ -43,8 +44,7 @@ class PesoTab extends Component {
       elefantiforeste:
         (this.state.peso * this.switchSelect()) / Utils.PESO_ELEFANTE_FORESTE,
       balenottereazzurre:
-        (this.state.peso * this.switchSelect()) /
-        Utils.PESO_ELEFANTE_BALENOTTERA,
+        (this.state.peso * this.switchSelect()) / Utils.PESO_BALENOTTERA,
       trex: (this.state.peso * this.switchSelect()) / Utils.PESO_TREX,
       gorilla: (this.state.peso * this.switchSelect()) / Utils.PESO_GORILLA,
       formiche: (this.state.peso * this.switchSelect()) / Utils.PESO_FORMICA,
@@ -56,7 +56,9 @@ class PesoTab extends Component {
       rinocerontebianco:
         (this.state.peso * this.switchSelect()) / Utils.PESO_RINOCERONTE_BIANCO,
       matteomanzinellopeso:
-        (this.state.peso * this.switchSelect()) / Utils.MATTEOMANZINELLO_PESO
+        (this.state.peso * this.switchSelect()) / Utils.MATTEOMANZINELLO_PESO,
+      boeing747peso:
+        (this.state.peso * this.switchSelect()) / Utils.PESO_BOEING747
     });
   };
 
@@ -158,6 +160,11 @@ class PesoTab extends Component {
               tag={["whale"]}
               value={this.state.balenottereazzurre}
               text="balenottere azzurre"
+            />
+            <PiuomenoItem
+              tag={["plane"]}
+              value={this.state.boeing747peso}
+              text="Boeing 747"
             />
           </Paragraph>
         </Section>
