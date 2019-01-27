@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-require("dotenv").config();
-
 import App from "grommet/components/App";
 import Tabs from "grommet/components/Tabs";
 import Tab from "grommet/components/Tab";
@@ -20,9 +18,13 @@ import ValutaTab from "./tabs/ValutaTab";
 import PiuomenoVersion from "./components/PiuomenoVersion";
 
 const contentful = require("contentful");
+
+require("dotenv").config();
+
 const client = contentful.createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_API_KEY
+  space: "ngkko1w843tf",
+  accessToken:
+    "ro96f66a8f02f3078f739071aed3e90664f69f70237fc82d3298c29f5dbed31115ot"
 });
 
 class Piuomeno extends Component {
