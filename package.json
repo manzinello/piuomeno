@@ -5,6 +5,7 @@
   "homepage": "https://piuomeno.netlify.com",
   "dependencies": {
     "contentful": "^7.1.0",
+    "dotenv": "^6.2.0",
     "grommet": "^1.13.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",

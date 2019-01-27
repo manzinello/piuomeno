@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+require("dotenv").config();
+
 import App from "grommet/components/App";
 import Tabs from "grommet/components/Tabs";
 import Tab from "grommet/components/Tab";
