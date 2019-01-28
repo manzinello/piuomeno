@@ -79,7 +79,15 @@ class Piuomeno extends Component {
                 width="24"
                 height="24"
               />{" "}
-              per <strong>Ilaria</strong> da{" "}
+              per{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://ilariaberetta.com"
+              >
+                <strong>Ilaria</strong>
+              </a>{" "}
+              da{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
