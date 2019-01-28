@@ -19,8 +19,6 @@ import PiuomenoVersion from "./components/PiuomenoVersion";
 
 const contentful = require("contentful");
 
-require("dotenv").config();
-
 const client = contentful.createClient({
   space: "ngkko1w843tf",
   accessToken:
