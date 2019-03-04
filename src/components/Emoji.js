@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 const emojiSize = 24;
 
-class PiuomenoEmoji extends Component {
+class Emoji extends Component {
   render = () => {
     return (
       <span key={this.props.emoji.toString()}>
@@ -17,4 +17,4 @@ class PiuomenoEmoji extends Component {
   };
 }
 
-export default PiuomenoEmoji;
+export default Emoji;

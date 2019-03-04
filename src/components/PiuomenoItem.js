@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-import PiuomenoEmoji from "./PiuomenoEmoji";
+import Emoji from "./Emoji";
 
 class PiuomenoItem extends Component {
   render = () => {
     return (
       <span>
         {this.props.tag.map(v => (
-          <PiuomenoEmoji emoji={v} />
+          <Emoji emoji={v} />
         ))}{" "}
         ~<strong>{this.props.value.toFixed(2)}</strong> {this.props.text}
         <br />

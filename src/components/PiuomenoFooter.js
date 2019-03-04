@@ -4,7 +4,7 @@ import Paragraph from "grommet/components/Paragraph";
 import Footer from "grommet/components/Footer";
 import Box from "grommet/components/Box";
 
-import PiuomenoVersion from "./PiuomenoVersion";
+import Version from "./Version";
 
 class PiuomenoFooter extends Component {
   render = () => {
@@ -15,7 +15,7 @@ class PiuomenoFooter extends Component {
         <Footer justify="between" size="medium">
           <Box pad={{ between: "small" }}>
             <Paragraph margin="none">
-              Più o meno (versione <PiuomenoVersion />
+              Più o meno (versione <Version />
               ), creato con <img
                 alt="love"
                 src={love}

@@ -24,7 +24,8 @@ class PesoTab extends Component {
     rinoceronteindiano: 0,
     rinocerontebianco: 0,
     matteomanzinellopeso: 0,
-    boeing747peso: 0
+    boeing747peso: 0,
+    tirvuoto: 0
   };
   handleChangePeso = event => {
     this.setState(
@@ -58,7 +59,8 @@ class PesoTab extends Component {
       matteomanzinellopeso:
         (this.state.peso * this.switchSelect()) / Utils.MATTEOMANZINELLO_PESO,
       boeing747peso:
-        (this.state.peso * this.switchSelect()) / Utils.PESO_BOEING747
+        (this.state.peso * this.switchSelect()) / Utils.PESO_BOEING747,
+      tirvuoto: (this.state.peso * this.switchSelect()) / Utils.TIR_VUOTO_PESO
     });
   };
 
@@ -156,6 +158,11 @@ class PesoTab extends Component {
               text="elefanti africani"
             />
             <PiuomenoItem tag={["trex"]} value={this.state.trex} text="T-Rex" />
+            <PiuomenoItem
+              tag={["tir"]}
+              value={this.state.tirvuoto}
+              text="tir vuoti"
+            />
             <PiuomenoItem
               tag={["whale"]}
               value={this.state.balenottereazzurre}
