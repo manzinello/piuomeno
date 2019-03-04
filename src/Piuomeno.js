@@ -12,8 +12,9 @@ import SuperficieTab from "./tabs/SuperficieTab";
 import LunghezzaTab from "./tabs/LunghezzaTab";
 import ValutaTab from "./tabs/ValutaTab";
 
-import "./piuomeno.css";
 import PiuomenoFooter from "./components/PiuomenoFooter";
+
+import "./piuomeno.css";
 
 class Piuomeno extends Component {
   state = {
