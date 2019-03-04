@@ -6,18 +6,14 @@ import Tab from "grommet/components/Tab";
 
 import Header from "grommet/components/Header";
 import Title from "grommet/components/Title";
-import Paragraph from "grommet/components/Paragraph";
-import Footer from "grommet/components/Footer";
-import Box from "grommet/components/Box";
 
 import PesoTab from "./tabs/PesoTab";
 import SuperficieTab from "./tabs/SuperficieTab";
 import LunghezzaTab from "./tabs/LunghezzaTab";
 import ValutaTab from "./tabs/ValutaTab";
 
-import PiuomenoVersion from "./components/PiuomenoVersion";
-
 import "./piuomeno.css";
+import PiuomenoFooter from "./components/PiuomenoFooter";
 
 class Piuomeno extends Component {
   state = {
@@ -33,7 +29,6 @@ class Piuomeno extends Component {
   componentDidMount = () => {};
 
   render() {
-    var love = "emoji/love.png";
     var elephant = "emoji/elephant.png";
 
     return (
@@ -58,43 +53,7 @@ class Piuomeno extends Component {
             <ValutaTab />
           </Tab>
         </Tabs>
-        <div class="piuomeno-footer">
-          <Footer justify="between" size="medium">
-            <Box pad={{ between: "small" }}>
-              <Paragraph margin="none">
-                Più o meno (versione <PiuomenoVersion />
-                ), creato con{" "}
-                <img alt="love" src={love} width="24" height="24" /> per{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://ilariaberetta.com"
-                >
-                  <strong>Ilaria</strong>
-                </a>{" "}
-                da{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://matteomanzinello.com"
-                >
-                  <strong>Matteo</strong>
-                </a>
-              </Paragraph>
-              <Paragraph size="small" margin="none">
-                Più o meno è un progetto <strong>open source</strong>, trovi
-                tutto il suo codice su{" "}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://github.com/manzinello/piuomeno"
-                >
-                  GitHub
-                </a>
-              </Paragraph>
-            </Box>
-          </Footer>
-        </div>
+        <PiuomenoFooter />
       </App>
     );
   }
