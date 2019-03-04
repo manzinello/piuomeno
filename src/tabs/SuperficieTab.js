@@ -21,7 +21,8 @@ class SuperficieTab extends Component {
       italia: 0,
       oceaniatlantici: 0,
       oceanipacifici: 0,
-      terre: 0
+      terre: 0,
+      lune: 0
     };
   }
 
@@ -47,7 +48,9 @@ class SuperficieTab extends Component {
         (this.state.superficie * this.switchSelect()) / Utils.OCEANO_ATLANTICO,
       oceanipacifici:
         (this.state.superficie * this.switchSelect()) / Utils.OCEANO_PACIFICO,
-      terre: (this.state.superficie * this.switchSelect()) / Utils.TERRA
+      terre: (this.state.superficie * this.switchSelect()) / Utils.TERRA,
+      lune:
+        (this.state.superficie * this.switchSelect()) / Utils.LUNA_SUPERFICIE
     });
   };
 
@@ -117,6 +120,7 @@ class SuperficieTab extends Component {
               value={this.state.italia}
               text="Italie"
             />
+            <PiuomenoItem tag={["moon"]} value={this.state.lune} text="Lune" />
             <PiuomenoItem
               tag={["oceano"]}
               value={this.state.oceaniatlantici}
