@@ -25,6 +25,7 @@ class PesoTab extends Component {
     rinocerontebianco: 0,
     matteomanzinellopeso: 0,
     boeing747peso: 0,
+    toureiffel: 0,
     tirvuoto: 0
   };
   handleChangePeso = event => {
@@ -60,7 +61,9 @@ class PesoTab extends Component {
         (this.state.peso * this.switchSelect()) / Utils.MATTEOMANZINELLO_PESO,
       boeing747peso:
         (this.state.peso * this.switchSelect()) / Utils.PESO_BOEING747,
-      tirvuoto: (this.state.peso * this.switchSelect()) / Utils.TIR_VUOTO_PESO
+      tirvuoto: (this.state.peso * this.switchSelect()) / Utils.TIR_VUOTO_PESO,
+      toureiffel:
+        (this.state.peso * this.switchSelect()) / Utils.PESO_TOUR_EIFFEL
     });
   };
 
@@ -172,6 +175,11 @@ class PesoTab extends Component {
               tag={["plane"]}
               value={this.state.boeing747peso}
               text="Boeing 747"
+            />
+            <PiuomenoItem
+              tag={["tour"]}
+              value={this.state.toureiffel}
+              text="Tour Eiffel"
             />
           </Paragraph>
         </Section>
