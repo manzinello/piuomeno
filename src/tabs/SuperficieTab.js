@@ -77,20 +77,6 @@ class SuperficieTab extends Component {
     );
   };
 
-  switchSelect = () => {
-    switch (this.state.select) {
-      case "metri quadrati":
-        return 1;
-      case "chilometri quadrati":
-        return 1000000;
-      default:
-        this.setState({
-          select: "metri quadrati"
-        });
-        return 1;
-    }
-  };
-
   render = () => {
     return (
       <div>

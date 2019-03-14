@@ -50,18 +50,6 @@ class ValutaTab extends Component {
     );
   };
 
-  switchSelect = () => {
-    switch (this.state.select) {
-      case "euro":
-        return 1;
-      default:
-        this.setState({
-          select: "euro"
-        });
-        return 1;
-    }
-  };
-
   render = () => {
     return (
       <div>
