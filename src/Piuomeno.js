@@ -44,7 +44,7 @@ class Piuomeno extends Component {
         </Header>
         <Tabs responsive={true} justify="start">
           <Tab title="Peso">
-            <PesoTab peso={this.handle} />
+            <PesoTab />
           </Tab>
           <Tab title="Lunghezza">
             <LunghezzaTab />

@@ -1,0 +1,19 @@
+{
+  "peso": {
+    "chilogrammi": 1,
+    "quintali": 100,
+    "tonnellate": 1000
+  },
+  "eta": {
+    "anni": 1
+  },
+  "lunghezza": {
+    "metri": 1,
+    "chilometri": 1000
+  },
+  "superficie": {
+    "metri quadrati": 1,
+    "chilometri quadrati": 1000000
+  },
+  "valuta": { "euro": 1 }
+}
