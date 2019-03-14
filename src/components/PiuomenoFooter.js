@@ -11,7 +11,7 @@ class PiuomenoFooter extends Component {
     var love = "emoji/love.png";
 
     return (
-      <div class="piuomeno-footer">
+      <div className="piuomeno-footer">
         <Footer justify="between" size="medium">
           <Box pad={{ between: "small" }}>
             <Paragraph margin="none">
