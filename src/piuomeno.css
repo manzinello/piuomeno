@@ -1,3 +1,9 @@
 .piuomeno-footer {
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 719px) {
+  .piuomeno-title {
+    margin: auto;
+  }
+}

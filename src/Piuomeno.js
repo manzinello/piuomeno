@@ -20,7 +20,9 @@ class Piuomeno extends Component {
   state = {
     peso: 0,
     superficie: 0,
-    lunghezza: 0
+    lunghezza: 0,
+    eta: 0,
+    valuta: 0
   };
 
   handle = v => {
@@ -33,14 +35,14 @@ class Piuomeno extends Component {
     var elephant = "emoji/elephant.png";
 
     return (
-      <App>
+      <App className="piuomeno-app">
         <Header size="large">
-          <Title>
+          <Title className="piuomeno-title">
             <img alt="elephant" src={elephant} width="24" height="24" />
             {"Più o meno"}
           </Title>
         </Header>
-        <Tabs responsive={false} justify="start">
+        <Tabs responsive={true} justify="start">
           <Tab title="Peso">
             <PesoTab peso={this.handle} />
           </Tab>
