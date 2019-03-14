@@ -9,6 +9,8 @@ import Select from "grommet/components/Select";
 
 import PiuomenoItem from "../components/PiuomenoItem";
 
+import units from "../data/units";
+
 class PesoTab extends Component {
   state = {
     peso: 0,
@@ -40,30 +42,43 @@ class PesoTab extends Component {
   updateUI = () => {
     this.setState({
       elefantiafricani:
-        (this.state.peso * this.switchSelect()) / Utils.PESO_ELEFANTE_AFRICANO,
+        (this.state.peso * units.peso[this.state.select]) /
+        Utils.PESO_ELEFANTE_AFRICANO,
       elefantiasiatici:
-        (this.state.peso * this.switchSelect()) / Utils.PESO_ELEFANTE_ASIATICO,
+        (this.state.peso * units.peso[this.state.select]) /
+        Utils.PESO_ELEFANTE_ASIATICO,
       elefantiforeste:
-        (this.state.peso * this.switchSelect()) / Utils.PESO_ELEFANTE_FORESTE,
+        (this.state.peso * units.peso[this.state.select]) /
+        Utils.PESO_ELEFANTE_FORESTE,
       balenottereazzurre:
-        (this.state.peso * this.switchSelect()) / Utils.PESO_BALENOTTERA,
-      trex: (this.state.peso * this.switchSelect()) / Utils.PESO_TREX,
-      gorilla: (this.state.peso * this.switchSelect()) / Utils.PESO_GORILLA,
-      formiche: (this.state.peso * this.switchSelect()) / Utils.PESO_FORMICA,
+        (this.state.peso * units.peso[this.state.select]) /
+        Utils.PESO_BALENOTTERA,
+      trex: (this.state.peso * units.peso[this.state.select]) / Utils.PESO_TREX,
+      gorilla:
+        (this.state.peso * units.peso[this.state.select]) / Utils.PESO_GORILLA,
+      formiche:
+        (this.state.peso * units.peso[this.state.select]) / Utils.PESO_FORMICA,
       rinocerontenero:
-        (this.state.peso * this.switchSelect()) / Utils.PESO_RINOCERONTE_NERO,
+        (this.state.peso * units.peso[this.state.select]) /
+        Utils.PESO_RINOCERONTE_NERO,
       rinoceronteindiano:
-        (this.state.peso * this.switchSelect()) /
+        (this.state.peso * units.peso[this.state.select]) /
         Utils.PESO_RINOCERONTE_INDIANO,
       rinocerontebianco:
-        (this.state.peso * this.switchSelect()) / Utils.PESO_RINOCERONTE_BIANCO,
+        (this.state.peso * units.peso[this.state.select]) /
+        Utils.PESO_RINOCERONTE_BIANCO,
       matteomanzinellopeso:
-        (this.state.peso * this.switchSelect()) / Utils.MATTEOMANZINELLO_PESO,
+        (this.state.peso * units.peso[this.state.select]) /
+        Utils.MATTEOMANZINELLO_PESO,
       boeing747peso:
-        (this.state.peso * this.switchSelect()) / Utils.PESO_BOEING747,
-      tirvuoto: (this.state.peso * this.switchSelect()) / Utils.TIR_VUOTO_PESO,
+        (this.state.peso * units.peso[this.state.select]) /
+        Utils.PESO_BOEING747,
+      tirvuoto:
+        (this.state.peso * units.peso[this.state.select]) /
+        Utils.TIR_VUOTO_PESO,
       toureiffel:
-        (this.state.peso * this.switchSelect()) / Utils.PESO_TOUR_EIFFEL
+        (this.state.peso * units.peso[this.state.select]) /
+        Utils.PESO_TOUR_EIFFEL
     });
   };
 
@@ -76,22 +91,6 @@ class PesoTab extends Component {
       },
       () => this.updateUI()
     );
-  };
-
-  switchSelect = () => {
-    switch (this.state.select) {
-      case "chilogrammi":
-        return 1;
-      case "quintali":
-        return 100;
-      case "tonnellate":
-        return 1000;
-      default:
-        this.setState({
-          select: "chilogrammi"
-        });
-        return 1;
-    }
   };
 
   render = () => {

@@ -9,6 +9,8 @@ import Select from "grommet/components/Select";
 
 import PiuomenoItem from "../components/PiuomenoItem";
 
+import units from "../data/units";
+
 class SuperficieTab extends Component {
   constructor(props) {
     super(props);
@@ -38,19 +40,29 @@ class SuperficieTab extends Component {
   updateUI = () => {
     this.setState({
       campidacalcio:
-        (this.state.superficie * this.switchSelect()) / Utils.CAMPO_DA_CALCIO,
+        (this.state.superficie * units.superficie[this.state.select]) /
+        Utils.CAMPO_DA_CALCIO,
       campidabasket:
-        (this.state.superficie * this.switchSelect()) / Utils.CAMPO_DA_BASKET,
+        (this.state.superficie * units.superficie[this.state.select]) /
+        Utils.CAMPO_DA_BASKET,
       campidatennis:
-        (this.state.superficie * this.switchSelect()) / Utils.CAMPO_DA_TENNIS,
-      italia: (this.state.superficie * this.switchSelect()) / Utils.ITALIA,
+        (this.state.superficie * units.superficie[this.state.select]) /
+        Utils.CAMPO_DA_TENNIS,
+      italia:
+        (this.state.superficie * units.superficie[this.state.select]) /
+        Utils.ITALIA,
       oceaniatlantici:
-        (this.state.superficie * this.switchSelect()) / Utils.OCEANO_ATLANTICO,
+        (this.state.superficie * units.superficie[this.state.select]) /
+        Utils.OCEANO_ATLANTICO,
       oceanipacifici:
-        (this.state.superficie * this.switchSelect()) / Utils.OCEANO_PACIFICO,
-      terre: (this.state.superficie * this.switchSelect()) / Utils.TERRA,
+        (this.state.superficie * units.superficie[this.state.select]) /
+        Utils.OCEANO_PACIFICO,
+      terre:
+        (this.state.superficie * units.superficie[this.state.select]) /
+        Utils.TERRA,
       lune:
-        (this.state.superficie * this.switchSelect()) / Utils.LUNA_SUPERFICIE
+        (this.state.superficie * units.superficie[this.state.select]) /
+        Utils.LUNA_SUPERFICIE
     });
   };
 

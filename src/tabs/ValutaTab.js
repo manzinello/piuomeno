@@ -9,6 +9,8 @@ import Select from "grommet/components/Select";
 
 import PiuomenoItem from "../components/PiuomenoItem";
 
+import units from "../data/units";
+
 class ValutaTab extends Component {
   constructor(props) {
     super(props);
@@ -31,8 +33,9 @@ class ValutaTab extends Component {
 
   updateUI = () => {
     this.setState({
-      goleador: (this.state.valuta * this.switchSelect()) / Utils.GOLEADOR,
-      caffe: (this.state.valuta * this.switchSelect()) / Utils.CAFFE
+      goleador:
+        (this.state.valuta * units.valuta[this.state.select]) / Utils.GOLEADOR,
+      caffe: (this.state.valuta * units.valuta[this.state.select]) / Utils.CAFFE
     });
   };
 

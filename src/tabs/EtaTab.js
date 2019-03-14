@@ -9,6 +9,8 @@ import Select from "grommet/components/Select";
 
 import PiuomenoItem from "../components/PiuomenoItem";
 
+import units from "../data/units";
+
 class EtaTab extends Component {
   constructor(props) {
     super(props);
@@ -30,7 +32,7 @@ class EtaTab extends Component {
 
   updateUI = () => {
     this.setState({
-      goleador: (this.state.eta * this.switchSelect()) / Utils.GOLEADOR
+      goleador: (this.state.eta * units.eta[this.state.select]) / Utils.GOLEADOR
     });
   };
 
@@ -43,18 +45,6 @@ class EtaTab extends Component {
       },
       () => this.updateUI()
     );
-  };
-
-  switchSelect = () => {
-    switch (this.state.select) {
-      case "anni":
-        return 1;
-      default:
-        this.setState({
-          select: "anni"
-        });
-        return 1;
-    }
   };
 
   render = () => {

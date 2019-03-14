@@ -9,6 +9,8 @@ import Select from "grommet/components/Select";
 
 import PiuomenoItem from "../components/PiuomenoItem";
 
+import units from "../data/units";
+
 class LunghezzaTab extends Component {
   constructor(props) {
     super(props);
@@ -34,16 +36,17 @@ class LunghezzaTab extends Component {
   updateUI = () => {
     this.setState({
       terraluna:
-        (this.state.lunghezza * this.switchSelect()) /
+        (this.state.lunghezza * units.lunghezza[this.state.select]) /
         Utils.DISTANZA_TERRA_LUNA,
       lunghezzacampocalcio:
-        (this.state.lunghezza * this.switchSelect()) /
+        (this.state.lunghezza * units.lunghezza[this.state.select]) /
         Utils.LUNGHEZZA_CAMPO_CALCIO,
       piscinaolimpionicalunghezza:
-        (this.state.lunghezza * this.switchSelect()) /
+        (this.state.lunghezza * units.lunghezza[this.state.select]) /
         Utils.PISCINA_OLIMPIONICA,
       lunghezzaboeing747:
-        (this.state.lunghezza * this.switchSelect()) / Utils.LUNGHEZZA_BOEING747
+        (this.state.lunghezza * units.lunghezza[this.state.select]) /
+        Utils.LUNGHEZZA_BOEING747
     });
   };
 
@@ -56,20 +59,6 @@ class LunghezzaTab extends Component {
       },
       () => this.updateUI()
     );
-  };
-
-  switchSelect = () => {
-    switch (this.state.select) {
-      case "metri":
-        return 1;
-      case "chilometri":
-        return 1000;
-      default:
-        this.setState({
-          select: "metri"
-        });
-        return 1;
-    }
   };
 
   render = () => {
