@@ -1,5 +1,6 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow } = require("electron");
+var path = require("path");
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -18,15 +19,15 @@ function createWindow() {
     darkTheme: true,
     webPreferences: {
       nodeIntegration: true
-    }
-    // icon: path.join(__dirname, "../public/emoji/elephant.png")
+    },
+    icon: path.join(__dirname, "assets/icon/elephant.png")
   });
 
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();
   });
 
-  mainWindow.loadURL("https://piuomeno.netlify.com/");
+  mainWindow.loadURL("https://piuomeno.netlify.com");
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
