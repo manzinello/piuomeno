@@ -1,0 +1,11 @@
+directories:
+  output: dist
+  buildResources: assets
+files:
+  - filter:
+      - build/**/*
+extraMetadata:
+  main: build/electron.js
+appId: com.matteomanzinello.piuomeno
+extends: react-cra
+electronVersion: 4.1.0

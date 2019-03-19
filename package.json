@@ -20,7 +20,12 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "electron": "electron .",
-    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron ."
+    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.matteomanzinello.piuomeno"
   },
   "devDependencies": {
     "electron": "^4.1.0",
