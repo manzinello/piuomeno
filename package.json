@@ -21,7 +21,9 @@
     "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron ."
   },
   "devDependencies": {
-    "electron": "^4.1.0"
+    "electron": "^4.1.0",
+    "electron-builder": "^20.39.0",
+    "electron-packager": "^13.1.1"
   },
   "browserslist": [
     ">0.2%",
