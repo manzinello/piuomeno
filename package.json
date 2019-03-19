@@ -25,30 +25,6 @@
     "dist": "electron-builder",
     "postinstall": "electron-builder install-app-deps"
   },
-  "build": {
-    "appId": "com.matteomanzinello.piuomeno",
-    "files": [
-      "build/**/*",
-      "node_modules/**/*"
-    ],
-    "directories": {
-      "buildResources": "assets"
-    },
-    "mac": {
-      "target": [
-        "dmg",
-        "zip"
-      ],
-      "icon": "./build/assets/icons/mac/icon.icns"
-    },
-    "win": {
-      "target": "NSIS",
-      "icon": "./build/assets/icons/win/piuomeno.ico"
-    },
-    "linux": {
-      "target": "deb"
-    }
-  },
   "devDependencies": {
     "electron": "^4.1.0",
     "electron-builder": "^20.39.0",

@@ -7,3 +7,32 @@ https://piuomeno.netlify.com
 App creata per paragonare le misure con unità di misura non convenzionali
 
 creato con React (❤️)
+
+### Electron
+
+```
+"build": {
+    "appId": "com.matteomanzinello.piuomeno",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "./build/assets/icons/mac/icon.icns"
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "./build/assets/icons/win/piuomeno.ico"
+    },
+    "linux": {
+      "target": "deb"
+    }
+  },
+```
