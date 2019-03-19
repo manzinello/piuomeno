@@ -22,8 +22,7 @@
     "electron": "electron .",
     "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder",
-    "postinstall": "electron-builder install-app-deps"
+    "dist": "electron-builder"
   },
   "devDependencies": {
     "electron": "^4.1.0",

@@ -36,3 +36,7 @@ creato con React (❤️)
     }
   },
 ```
+
+```
+"postinstall": "electron-builder install-app-deps"
+```
