@@ -10,7 +10,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    frame: false,
+    toolbar: false,
     webPreferences: {
       nodeIntegration: true
     }
@@ -27,6 +27,7 @@ function createWindow() {
       protocol: "file:",
       slashes: true
     });
+
   mainWindow.loadURL(startUrl);
 
   // Open the DevTools.
