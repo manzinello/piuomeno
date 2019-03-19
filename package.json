@@ -34,7 +34,21 @@
       "node_modules/**/*"
     ],
     "directories": {
-      "buildResources": "assets"
+      "buildResources": "./assets"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "icon": "./assets/icons/mac/icon.icns"
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "./assets/icons/win/piuomeno.ico"
+    },
+    "linux": {
+      "target": "deb"
     }
   },
   "devDependencies": {
