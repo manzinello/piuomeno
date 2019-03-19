@@ -32,6 +32,7 @@
     "electron-builder": "^20.39.0",
     "electron-packager": "^13.1.1"
   },
+  "postinstall": "electron-builder install-app-deps",
   "browserslist": [
     ">0.2%",
     "not dead",
