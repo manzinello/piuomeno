@@ -20,7 +20,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true
     },
-    icon: path.join(__dirname, "/assets/icons/png/64x64.png")
+    icon: path.join(__dirname, "assets/icons/png/64x64.png")
   });
 
   mainWindow.once("ready-to-show", () => {
@@ -30,7 +30,7 @@ function createWindow() {
   mainWindow.loadURL("https://piuomeno.netlify.com");
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on("closed", function() {
