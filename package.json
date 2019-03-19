@@ -2,7 +2,7 @@
   "name": "piuomeno",
   "version": "0.5.0",
   "private": true,
-  "homepage": "https://piuomeno.netlify.com",
+  "homepage": "./",
   "dependencies": {
     "dotenv": "^7.0.0",
     "grommet": "^1.13.0",
@@ -17,7 +17,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "electron": "electron ."
+    "electron": "electron .",
+    "electron-dev": "ELECTRON_START_URL=http://localhost:3000 electron ."
   },
   "devDependencies": {
     "electron": "^4.1.0"
