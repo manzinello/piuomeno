@@ -8,11 +8,14 @@ let mainWindow;
 function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    titleBarStyle: "hidden",
     width: 800,
     height: 600,
     show: false,
     toolbar: false,
+    resizable: false,
+    fullscreenable: true,
+    title: "Più o meno",
+    darkTheme: true,
     webPreferences: {
       nodeIntegration: true
     }
