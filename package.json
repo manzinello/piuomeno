@@ -34,7 +34,7 @@
       "node_modules/**/*"
     ],
     "directories": {
-      "buildResources": "src/assets"
+      "buildResources": "assets"
     }
   },
   "devDependencies": {
