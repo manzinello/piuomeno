@@ -1,6 +1,8 @@
 {
   "name": "piuomeno",
+  "description": "Conversioni non convenzionali",
   "version": "0.5.0",
+  "author": "Matteo Manzinello",
   "private": true,
   "homepage": "https://piuomeno.netlify.com/",
   "dependencies": {
