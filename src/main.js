@@ -20,7 +20,7 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true
     },
-    icon: path.join(__dirname, "assets/icon/elephant.png")
+    icon: path.join(__dirname, "/assets/icons/png/64x64.png")
   });
 
   mainWindow.once("ready-to-show", () => {
