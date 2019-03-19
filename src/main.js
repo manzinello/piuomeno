@@ -15,6 +15,9 @@ function createWindow() {
     }
   });
 
+  // nessun menu
+  mainWindow.setMenu(null);
+
   // and load the index.html of the app.
   const startUrl =
     process.env.ELECTRON_START_URL ||
@@ -57,6 +60,10 @@ app.on("activate", function() {
   if (mainWindow === null) {
     createWindow();
   }
+});
+
+app.on("browser-window-created", function(e, window) {
+  window.setMenu(null);
 });
 
 // In this file you can include the rest of your app's specific main process
