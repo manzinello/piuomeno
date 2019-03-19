@@ -8,27 +8,22 @@ let mainWindow;
 function createWindow() {
   // Create the browser window.
   mainWindow = new BrowserWindow({
+    titleBarStyle: "hidden",
     width: 800,
     height: 600,
+    show: false,
     toolbar: false,
     webPreferences: {
       nodeIntegration: true
     }
+    // icon: path.join(__dirname, "../public/emoji/elephant.png")
   });
 
-  // nessun menu
-  mainWindow.setMenu(null);
+  mainWindow.once("ready-to-show", () => {
+    mainWindow.show();
+  });
 
-  // and load the index.html of the app.
-  const startUrl =
-    process.env.ELECTRON_START_URL ||
-    url.format({
-      pathname: path.join(__dirname, "/../build/index.html"),
-      protocol: "file:",
-      slashes: true
-    });
-
-  mainWindow.loadURL(startUrl);
+  mainWindow.loadURL("https://piuomeno.netlify.com/");
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
