@@ -6,11 +6,11 @@
   "private": true,
   "homepage": "https://piuomeno.netlify.com/",
   "dependencies": {
-    "dotenv": "^7.0.0",
-    "grommet": "^1.13.0",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "dotenv": "^8.0.0",
+    "grommet": "^2.7.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
   },
   "main": "public/electron.js",
   "scripts": {
@@ -25,8 +25,8 @@
     "dist": "electron-builder"
   },
   "devDependencies": {
-    "electron": "^4.1.0",
-    "electron-builder": "^20.39.0",
+    "electron": "^5.0.2",
+    "electron-builder": "^20.43.0",
     "electron-packager": "^13.1.1"
   },
   "browserslist": [
