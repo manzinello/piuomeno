@@ -34,9 +34,9 @@ class PiuomenoFooter extends Component {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://matteomanzinello.com"
+                href="http://manzinello.com"
               >
-                <strong>Matteo</strong>
+                <strong>manzinello</strong>
               </a>
             </Paragraph>
             <Paragraph size="small" margin="none">
