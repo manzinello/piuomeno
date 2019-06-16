@@ -1,0 +1,7 @@
+[build]
+  functions = "lambda/build"
+[[redirects]]
+  from = "https://piuomeno.netlify.com/*"
+  to = "https://piuomeno.manzinello.com/:splat"
+  status = 301
+  force = true

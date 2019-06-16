@@ -4,7 +4,7 @@
   "version": "0.5.0",
   "author": "Matteo Manzinello",
   "private": true,
-  "homepage": "https://piuomeno.netlify.com/",
+  "homepage": "https://piuomeno.manzinello.com",
   "dependencies": {
     "dotenv": "^8.0.0",
     "grommet": "^1.11.0",
